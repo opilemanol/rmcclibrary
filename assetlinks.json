@@ -1,0 +1,8 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "app.hosted.us_central1.studio__studio_6860217494_f174b.twa",
+        "sha256_cert_fingerprints": ["A0:B4:BE:CB:F1:43:C8:11:46:47:E6:26:71:E6:B3:C9:24:4B:74:93:E9:EA:59:E3:3C:09:2C:17:ED:6C:C1:4A"]
+      }
+    }]

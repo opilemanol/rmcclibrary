@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="enableNotification">true</bool>
+    <bool name="enableSiteSettingsShortcut">true</bool>
+    <color name="backgroundColor">#FFFFFF</color>
+    <color name="colorPrimary">#74A3BC</color>
+    <color name="colorPrimaryDark">#74A3BC</color>
+    <color name="navigationColor">#74A3BC</color>
+    <color name="navigationColorDark">#74A3BC</color>
+    <color name="navigationDividerColor">#74A3BC</color>
+    <color name="navigationDividerColorDark">#74A3BC</color>
+    <color name="shortcut_background">#F5F5F5</color>
+    <integer name="splashScreenFadeOutDuration">300</integer>
+    <string name="appName" translatable="false">RMCC Library</string>
+    <string name="assetStatements">
+    [{
+        \"relation\": [\"delegate_permission/common.handle_all_urls\"],
+        \"target\": {
+            \"namespace\": \"web\",
+            \"site\": \"https://studio--studio-6860217494-f174b.us-central1.hosted.app\"
+        }
+    }]
+    
+  </string>
+    <string name="fallbackType" translatable="false">customtabs</string>
+    <string name="fullScopeUrl" translatable="false">https://studio--studio-6860217494-f174b.us-central1.hosted.app/</string>
+    <string name="generatorApp" translatable="false">PWABuilder</string>
+    <string name="hostName" translatable="false">studio--studio-6860217494-f174b.us-central1.hosted.app</string>
+    <string name="launchUrl" translatable="false">https://studio--studio-6860217494-f174b.us-central1.hosted.app/</string>
+    <string name="launcherName" translatable="false">RMCC Library</string>
+    <string name="orientation" translatable="false">default</string>
+    <string name="providerAuthority" translatable="false">app.hosted.us_central1.studio__studio_6860217494_f174b.twa.fileprovider</string>
+    <string name="webManifestUrl" translatable="false">https://studio--studio-6860217494-f174b.us-central1.hosted.app/manifest.json</string>
+</resources>

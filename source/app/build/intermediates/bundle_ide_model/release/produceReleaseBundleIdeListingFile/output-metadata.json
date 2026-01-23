@@ -1,0 +1,18 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "BUNDLE",
+    "kind": "RegularFile"
+  },
+  "applicationId": "app.hosted.us_central1.studio__studio_6860217494_f174b.twa",
+  "variantName": "release",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "attributes": [],
+      "outputFile": "../../../../outputs/bundle/release/app-release.aab"
+    }
+  ],
+  "elementType": "File"
+}
