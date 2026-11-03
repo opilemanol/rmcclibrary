@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Automatically generated file. DO NOT MODIFY -->
+
+    <!-- Value from default config. -->
+    <bool name="enableNotification">true</bool>
+    <!-- Value from default config. -->
+    <bool name="enableSiteSettingsShortcut">true</bool>
+    <!-- Value from default config. -->
+    <color name="backgroundColor">#FFFFFF</color>
+    <!-- Value from default config. -->
+    <color name="colorPrimary">#74A3BC</color>
+    <!-- Value from default config. -->
+    <color name="colorPrimaryDark">#74A3BC</color>
+    <!-- Value from default config. -->
+    <color name="navigationColor">#74A3BC</color>
+    <!-- Value from default config. -->
+    <color name="navigationColorDark">#74A3BC</color>
+    <!-- Value from default config. -->
+    <color name="navigationDividerColor">#74A3BC</color>
+    <!-- Value from default config. -->
+    <color name="navigationDividerColorDark">#74A3BC</color>
+    <!-- Value from default config. -->
+    <integer name="splashScreenFadeOutDuration">300</integer>
+    <!-- Value from default config. -->
+    <string name="appName" translatable="false">RMCC Library</string>
+    <!-- Value from default config. -->
+    <string name="fallbackType" translatable="false">customtabs</string>
+    <!-- Value from default config. -->
+    <string name="fullScopeUrl" translatable="false">https://studio--studio-6860217494-f174b.us-central1.hosted.app/</string>
+    <!-- Value from default config. -->
+    <string name="generatorApp" translatable="false">PWABuilder</string>
+    <!-- Value from default config. -->
+    <string name="hostName" translatable="false">studio--studio-6860217494-f174b.us-central1.hosted.app</string>
+    <!-- Value from default config. -->
+    <string name="launchUrl" translatable="false">https://studio--studio-6860217494-f174b.us-central1.hosted.app/</string>
+    <!-- Value from default config. -->
+    <string name="launcherName" translatable="false">RMCC Library</string>
+    <!-- Value from default config. -->
+    <string name="orientation" translatable="false">default</string>
+    <!-- Value from default config. -->
+    <string name="providerAuthority" translatable="false">app.hosted.us_central1.studio__studio_6860217494_f174b.twa.fileprovider</string>
+    <!-- Value from default config. -->
+    <string name="webManifestUrl" translatable="false">https://studio--studio-6860217494-f174b.us-central1.hosted.app/manifest.json</string>
+
+</resources>

@@ -51,14 +51,35 @@ def twaManifest = [
 ]
 
 android {
+
+
+
+    signingConfigs {
+        release {
+            // Referencing the files visible in your explorer
+            storeFile file("../signingKey.keystore")
+            storePassword "RfbGgftsDLpg" // Check signing-key-info.txt for these
+            keyAlias "my-key-alias"
+            keyPassword "RfbGgftsDLpg"
+        }
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
     compileSdkVersion 36
     namespace "app.hosted.us_central1.studio__studio_6860217494_f174b.twa"
     defaultConfig {
         applicationId "app.hosted.us_central1.studio__studio_6860217494_f174b.twa"
         minSdkVersion 23
-        targetSdkVersion 35
-        versionCode 10
-        versionName "1.0.0.10"
+        targetSdkVersion 36
+        versionCode 18
+        versionName "1.0.0.18"
 
         // The name for the application
         resValue "string", "appName", twaManifest.name
@@ -209,5 +230,15 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     
         implementation 'com.google.androidbrowserhelper:androidbrowserhelper:2.6.2'
+    implementation 'androidx.webkit:webkit:1.9.0'
+    implementation 'com.google.android.gms:play-services-ads:23.0.0'
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    }
+
+    android {
+        defaultConfig {
+            multiDexEnabled true
+        }
+    }
     
-}

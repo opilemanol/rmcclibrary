@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offline - RMCC CHURCH LIBRARY</title>
+    <style>
+        :root {
+            --primary-color: #6c5ce7; /* Soft purple/spiritual theme */
+            --text-color: #2d3436;
+            --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: var(--bg-gradient);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-color);
+            text-align: center;
+        }
+
+        .container {
+            padding: 30px;
+            max-width: 300px;
+        }
+
+        /* Simple CSS Icon for a "Book/Bible" */
+        .icon-box {
+            width: 80px;
+            height: 100px;
+            background: white;
+            border-radius: 5px 15px 15px 5px;
+            margin: 0 auto 30px;
+            position: relative;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            border-left: 8px solid var(--primary-color);
+        }
+
+        .icon-box::after {
+            content: "";
+            position: absolute;
+            top: 20px; left: 15px;
+            width: 40px; height: 4px;
+            background: #eee;
+            box-shadow: 0 10px 0 #eee, 0 20px 0 #eee;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 40px;
+            opacity: 0.8;
+        }
+
+        .btn-retry {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 5px 15px rgba(108, 92, 231, 0.4);
+            transition: transform 0.2s;
+            text-decoration: none;
+        }
+
+        .btn-retry:active {
+            transform: scale(0.95);
+        }
+
+        .footer-note {
+            position: absolute;
+            bottom: 20px;
+            font-size: 12px;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="icon-box"></div>
+        
+        <h1>God bless yoou!</h1>
+        
+        <p>Your Pocket Christian Library, but you are currently <b>offline</b>. <br><br>
+           Please turn on your <b>Mobile Data</b> or connect to <b>Wi-Fi</b> to continue reading.</p>
+
+<button class="btn-retry" onclick="Android.retryConnection()">TRY AGAIN</button>
+
+
+
+    <div class="footer-note">Waiting for connection...</div>
+
+</body>
+</html>
