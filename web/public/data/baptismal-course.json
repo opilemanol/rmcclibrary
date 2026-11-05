@@ -1,0 +1,120 @@
+{
+  "libraryId": "baptismal-course",
+  "libraryName": "Baptismal Course",
+  "modules": [
+    {
+      "id": "baptism-001",
+      "moduleNumber": 1,
+      "title": "Sample Module: Preparing for Baptism",
+      "description": "Demonstration module: discuss baptismal preparation with church leaders and use the congregation’s approved teaching.",
+      "scriptureReferences": [
+        "Matthew 28:19–20; Romans 6:3–4; Acts 8:36–38"
+      ],
+      "memoryVerse": "Romans 6:4",
+      "introduction": "This sample module presents questions for a guided conversation. It is not a substitute for the church’s baptismal teaching or pastoral guidance.",
+      "lessons": [
+        {
+          "title": "Questions to discuss",
+          "content": "What does baptism mean in your congregation? What practical arrangements, consent and support are needed? Which church leader can answer questions?"
+        }
+      ],
+      "discussionQuestions": [
+        "What questions would you like to ask before baptism?",
+        "How can the congregation support a person before and after the service?"
+      ],
+      "reviewQuestions": [
+        "Name one question you want to discuss with a church leader."
+      ],
+      "assignments": [
+        "Awaiting church-approved content."
+      ],
+      "conclusion": "Invite learners to speak with an authorized church leader about local teaching, scheduling and participation.",
+      "contentStatus": "sample"
+    },
+    {
+      "id": "baptism-002",
+      "moduleNumber": 2,
+      "title": "Sample Module: A Community of Support",
+      "description": "A discussion guide about learning and belonging within a church community.",
+      "scriptureReferences": [
+        "Acts 2:42–47; Galatians 6:2"
+      ],
+      "memoryVerse": "Galatians 6:2",
+      "introduction": "Use this sample as a conversation starter and supplement it with approved local course materials.",
+      "lessons": [
+        {
+          "title": "Growing together",
+          "content": "Discuss how a community can offer practical care, welcome questions and respect personal boundaries."
+        }
+      ],
+      "discussionQuestions": [
+        "What kinds of support help a person feel connected?",
+        "How can a congregation offer help without pressure?"
+      ],
+      "reviewQuestions": [
+        "Name one trusted person or church contact you could approach with a question."
+      ],
+      "assignments": [
+        "Awaiting church-approved content."
+      ],
+      "conclusion": "Agree on one appropriate next conversation with a course leader.",
+      "contentStatus": "sample"
+    },
+    {
+      "id": "baptism-003",
+      "moduleNumber": 3,
+      "title": "Baptismal Module 03",
+      "description": "Awaiting church-approved content.",
+      "scriptureReferences": [
+        "Awaiting church-approved content."
+      ],
+      "memoryVerse": "Awaiting church-approved content.",
+      "introduction": "Awaiting church-approved content.",
+      "lessons": [
+        {
+          "title": "Awaiting church-approved content.",
+          "content": "Awaiting church-approved content."
+        }
+      ],
+      "discussionQuestions": [
+        "Awaiting church-approved content."
+      ],
+      "reviewQuestions": [
+        "Awaiting church-approved content."
+      ],
+      "assignments": [
+        "Awaiting church-approved content."
+      ],
+      "conclusion": "Awaiting church-approved content.",
+      "contentStatus": "placeholder"
+    },
+    {
+      "id": "baptism-004",
+      "moduleNumber": 4,
+      "title": "Baptismal Module 04",
+      "description": "Awaiting church-approved content.",
+      "scriptureReferences": [
+        "Awaiting church-approved content."
+      ],
+      "memoryVerse": "Awaiting church-approved content.",
+      "introduction": "Awaiting church-approved content.",
+      "lessons": [
+        {
+          "title": "Awaiting church-approved content.",
+          "content": "Awaiting church-approved content."
+        }
+      ],
+      "discussionQuestions": [
+        "Awaiting church-approved content."
+      ],
+      "reviewQuestions": [
+        "Awaiting church-approved content."
+      ],
+      "assignments": [
+        "Awaiting church-approved content."
+      ],
+      "conclusion": "Awaiting church-approved content.",
+      "contentStatus": "placeholder"
+    }
+  ]
+}

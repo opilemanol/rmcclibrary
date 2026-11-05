@@ -1,0 +1,176 @@
+{
+  "libraryId": "discipleship-course",
+  "libraryName": "Discipleship Course",
+  "modules": [
+    {
+      "id": "discipleship-001",
+      "moduleNumber": 1,
+      "title": "Sample Module: Building a Sustainable Practice",
+      "description": "A practical demonstration module for reflecting, learning and making room for support.",
+      "scriptureReferences": [
+        "Mark 1:35; Luke 10:38–42"
+      ],
+      "memoryVerse": "Luke 10:42",
+      "introduction": "This module is an editable sample, not a complete or official discipleship curriculum.",
+      "lessons": [
+        {
+          "title": "Choose a realistic rhythm",
+          "content": "Identify a small practice that fits your current responsibilities, such as a short reading, reflection or service activity. Adapt it when life circumstances change."
+        }
+      ],
+      "discussionQuestions": [
+        "What practice feels realistic rather than burdensome?",
+        "Who could support you if the routine changes?"
+      ],
+      "reviewQuestions": [
+        "What adjustment would make this practice sustainable?"
+      ],
+      "assignments": [
+        "Try one small practice for a week and note what helped or hindered it."
+      ],
+      "conclusion": "Review the experience with curiosity, not shame, and decide whether to continue or adapt.",
+      "contentStatus": "sample"
+    },
+    {
+      "id": "discipleship-002",
+      "moduleNumber": 2,
+      "title": "Sample Module: Serving with Care",
+      "description": "A discussion module on practical, respectful service.",
+      "scriptureReferences": [
+        "Mark 10:45; Philippians 2:3–4"
+      ],
+      "memoryVerse": "Philippians 2:4",
+      "introduction": "Use church-approved teaching for the full course. This sample offers one structured reflection.",
+      "lessons": [
+        {
+          "title": "Ask before offering help",
+          "content": "Consider how consent, safety and listening shape helpful service. Ask what the person actually needs and respect their answer."
+        }
+      ],
+      "discussionQuestions": [
+        "How can service preserve another person’s dignity?",
+        "When might a referral to an experienced service be safer than trying to solve a problem alone?"
+      ],
+      "reviewQuestions": [
+        "What is one question you can ask before offering help?"
+      ],
+      "assignments": [
+        "Identify one local service or trusted church contact that can guide a complex request for help."
+      ],
+      "conclusion": "Responsible service includes knowing when to seek experienced support.",
+      "contentStatus": "sample"
+    },
+    {
+      "id": "discipleship-003",
+      "moduleNumber": 3,
+      "title": "Discipleship Module 03",
+      "description": "Awaiting church-approved content.",
+      "scriptureReferences": [
+        "Awaiting church-approved content."
+      ],
+      "memoryVerse": "Awaiting church-approved content.",
+      "introduction": "Awaiting church-approved content.",
+      "lessons": [
+        {
+          "title": "Awaiting church-approved content.",
+          "content": "Awaiting church-approved content."
+        }
+      ],
+      "discussionQuestions": [
+        "Awaiting church-approved content."
+      ],
+      "reviewQuestions": [
+        "Awaiting church-approved content."
+      ],
+      "assignments": [
+        "Awaiting church-approved content."
+      ],
+      "conclusion": "Awaiting church-approved content.",
+      "contentStatus": "placeholder"
+    },
+    {
+      "id": "discipleship-004",
+      "moduleNumber": 4,
+      "title": "Discipleship Module 04",
+      "description": "Awaiting church-approved content.",
+      "scriptureReferences": [
+        "Awaiting church-approved content."
+      ],
+      "memoryVerse": "Awaiting church-approved content.",
+      "introduction": "Awaiting church-approved content.",
+      "lessons": [
+        {
+          "title": "Awaiting church-approved content.",
+          "content": "Awaiting church-approved content."
+        }
+      ],
+      "discussionQuestions": [
+        "Awaiting church-approved content."
+      ],
+      "reviewQuestions": [
+        "Awaiting church-approved content."
+      ],
+      "assignments": [
+        "Awaiting church-approved content."
+      ],
+      "conclusion": "Awaiting church-approved content.",
+      "contentStatus": "placeholder"
+    },
+    {
+      "id": "discipleship-005",
+      "moduleNumber": 5,
+      "title": "Discipleship Module 05",
+      "description": "Awaiting church-approved content.",
+      "scriptureReferences": [
+        "Awaiting church-approved content."
+      ],
+      "memoryVerse": "Awaiting church-approved content.",
+      "introduction": "Awaiting church-approved content.",
+      "lessons": [
+        {
+          "title": "Awaiting church-approved content.",
+          "content": "Awaiting church-approved content."
+        }
+      ],
+      "discussionQuestions": [
+        "Awaiting church-approved content."
+      ],
+      "reviewQuestions": [
+        "Awaiting church-approved content."
+      ],
+      "assignments": [
+        "Awaiting church-approved content."
+      ],
+      "conclusion": "Awaiting church-approved content.",
+      "contentStatus": "placeholder"
+    },
+    {
+      "id": "discipleship-006",
+      "moduleNumber": 6,
+      "title": "Discipleship Module 06",
+      "description": "Awaiting church-approved content.",
+      "scriptureReferences": [
+        "Awaiting church-approved content."
+      ],
+      "memoryVerse": "Awaiting church-approved content.",
+      "introduction": "Awaiting church-approved content.",
+      "lessons": [
+        {
+          "title": "Awaiting church-approved content.",
+          "content": "Awaiting church-approved content."
+        }
+      ],
+      "discussionQuestions": [
+        "Awaiting church-approved content."
+      ],
+      "reviewQuestions": [
+        "Awaiting church-approved content."
+      ],
+      "assignments": [
+        "Awaiting church-approved content."
+      ],
+      "conclusion": "Awaiting church-approved content.",
+      "contentStatus": "placeholder"
+    }
+  ]
+}

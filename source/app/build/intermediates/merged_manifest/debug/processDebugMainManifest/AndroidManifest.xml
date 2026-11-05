@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="app.hosted.us_central1.studio__studio_6860217494_f174b.twa"
-    android:versionCode="17"
-    android:versionName="1.0.0.17" >
+    android:versionCode="18"
+    android:versionName="1.0.0.18" >
 
     <uses-sdk
         android:minSdkVersion="23"
-        android:targetSdkVersion="35" />
+        android:targetSdkVersion="36" />
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -46,11 +46,10 @@
         android:extractNativeLibs="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/appName"
-        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-        android:usesCleartextTraffic="true" >
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-5927630860510493~2568705315" />
+            android:value="@string/admobAppId" />
 
         <activity
             android:name="app.hosted.us_central1.studio__studio_6860217494_f174b.twa.LauncherActivity"
@@ -64,7 +63,7 @@
 
         <provider
             android:name="androidx.core.content.FileProvider"
-            android:authorities="app.hosted.us_central1.studio__studio_6860217494_f174b.twa.fileprovider"
+            android:authorities="@string/providerAuthority"
             android:exported="false"
             android:grantUriPermissions="true" >
             <meta-data

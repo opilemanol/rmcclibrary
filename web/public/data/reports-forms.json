@@ -1,0 +1,1094 @@
+{
+  "libraryId": "reports-forms",
+  "libraryName": "Reports & Forms",
+  "forms": [
+    {
+      "id": "weekly-attendance",
+      "title": "Weekly Service Attendance Report",
+      "cadence": "Weekly",
+      "category": "Service reporting",
+      "description": "Record attendance by service and age group. Use counts only; avoid including personal details about attendees.",
+      "fields": [
+        {
+          "id": "serviceDate",
+          "label": "Service date",
+          "type": "date",
+          "required": true
+        },
+        {
+          "id": "serviceName",
+          "label": "Service",
+          "type": "select",
+          "required": true,
+          "options": [
+            "Sunday morning",
+            "Sunday evening",
+            "Midweek",
+            "Special service",
+            "Other"
+          ]
+        },
+        {
+          "id": "adults",
+          "label": "Adults",
+          "type": "number",
+          "required": true
+        },
+        {
+          "id": "children",
+          "label": "Children",
+          "type": "number",
+          "required": true
+        },
+        {
+          "id": "visitors",
+          "label": "First-time visitors",
+          "type": "number",
+          "required": false
+        },
+        {
+          "id": "online",
+          "label": "Online participants",
+          "type": "number",
+          "required": false
+        },
+        {
+          "id": "notes",
+          "label": "Non-identifying notes",
+          "type": "textarea",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "weekly-department",
+      "title": "Weekly Department Activity Report",
+      "cadence": "Weekly",
+      "category": "Department reporting",
+      "description": "Summarize activities, participation and follow-up needs for a church department.",
+      "fields": [
+        {
+          "id": "weekEnding",
+          "label": "Week ending",
+          "type": "date",
+          "required": true
+        },
+        {
+          "id": "department",
+          "label": "Department",
+          "type": "select",
+          "required": true,
+          "options": [
+            "Children",
+            "Youth",
+            "Worship",
+            "Ushering",
+            "Media",
+            "Outreach",
+            "Prayer",
+            "Other"
+          ]
+        },
+        {
+          "id": "preparedBy",
+          "label": "Prepared by",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": "activities",
+          "label": "Activities completed",
+          "type": "textarea",
+          "required": true
+        },
+        {
+          "id": "attendance",
+          "label": "Participants",
+          "type": "number",
+          "required": false
+        },
+        {
+          "id": "needs",
+          "label": "Supplies or support needed",
+          "type": "textarea",
+          "required": false
+        },
+        {
+          "id": "nextWeek",
+          "label": "Plans for next week",
+          "type": "textarea",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "weekly-offering",
+      "title": "Weekly Offering Record",
+      "cadence": "Weekly",
+      "category": "Finance reporting",
+      "description": "Local record for authorized treasurers. Follow church financial controls; do not attach bank credentials.",
+      "fields": [
+        {
+          "id": "serviceDate",
+          "label": "Service date",
+          "type": "date",
+          "required": true
+        },
+        {
+          "id": "offeringType",
+          "label": "Offering category",
+          "type": "select",
+          "required": true,
+          "options": [
+            "General",
+            "Missions",
+            "Building",
+            "Special event",
+            "Other"
+          ]
+        },
+        {
+          "id": "currency",
+          "label": "Currency code",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": "amount",
+          "label": "Amount counted",
+          "type": "number",
+          "required": true
+        },
+        {
+          "id": "countedBy",
+          "label": "Counted by",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": "verifiedBy",
+          "label": "Second verifier",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": "receiptReference",
+          "label": "Receipt/reference number",
+          "type": "text",
+          "required": false
+        },
+        {
+          "id": "notes",
+          "label": "Reconciliation notes",
+          "type": "textarea",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "weekly-prayer-meeting",
+      "title": "Prayer Meeting Report",
+      "cadence": "Weekly",
+      "category": "Prayer and attendance",
+      "description": "Track meeting details and non-sensitive follow-up actions. Do not record private prayer disclosures without consent.",
+      "fields": [
+        {
+          "id": "meetingDate",
+          "label": "Meeting date",
+          "type": "date",
+          "required": true
+        },
+        {
+          "id": "location",
+          "label": "Location",
+          "type": "text",
+          "required": false
+        },
+        {
+          "id": "facilitator",
+          "label": "Facilitator",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": "attendance",
+          "label": "Attendance",
+          "type": "number",
+          "required": false
+        },
+        {
+          "id": "theme",
+          "label": "Meeting theme",
+          "type": "text",
+          "required": false
+        },
+        {
+          "id": "activities",
+          "label": "Activities or topics",
+          "type": "textarea",
+          "required": false
+        },
+        {
+          "id": "followUp",
+          "label": "Non-sensitive follow-up actions",
+          "type": "textarea",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "new-convert-followup",
+      "title": "New Convert and Follow-up Record",
+      "cadence": "As needed",
+      "category": "Pastoral follow-up",
+      "description": "Keep contact details private, collect only what is needed and obtain permission before follow-up.",
+      "fields": [
+        {
+          "id": "recordDate",
+          "label": "Record date",
+          "type": "date",
+          "required": true
+        },
+        {
+          "id": "fullName",
+          "label": "Name",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": "preferredContact",
+          "label": "Preferred contact",
+          "type": "tel",
+          "required": false
+        },
+        {
+          "id": "contactPermission",
+          "label": "Permission to contact",
+          "type": "checkbox",
+          "required": false
+        },
+        {
+          "id": "preferredMethod",
+          "label": "Preferred method",
+          "type": "select",
+          "required": false,
+          "options": [
+            "Phone",
+            "Text message",
+            "Email",
+            "In person",
+            "No follow-up requested"
+          ]
+        },
+        {
+          "id": "followUpDate",
+          "label": "Agreed follow-up date",
+          "type": "date",
+          "required": false
+        },
+        {
+          "id": "assignedWorker",
+          "label": "Assigned worker",
+          "type": "text",
+          "required": false
+        },
+        {
+          "id": "notes",
+          "label": "Consent-based follow-up notes",
+          "type": "textarea",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "membership-registration",
+      "title": "Church Membership Registration",
+      "cadence": "As needed",
+      "category": "Registration",
+      "description": "Collect only necessary information, explain how the church will use it, and store this device securely.",
+      "fields": [
+        {
+          "id": "fullName",
+          "label": "Full name",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": "dateOfBirth",
+          "label": "Date of birth",
+          "type": "date",
+          "required": false
+        },
+        {
+          "id": "phone",
+          "label": "Phone number",
+          "type": "tel",
+          "required": false
+        },
+        {
+          "id": "email",
+          "label": "Email address",
+          "type": "email",
+          "required": false
+        },
+        {
+          "id": "address",
+          "label": "Home address",
+          "type": "textarea",
+          "required": false
+        },
+        {
+          "id": "dateJoined",
+          "label": "Date joined",
+          "type": "date",
+          "required": false
+        },
+        {
+          "id": "membershipStatus",
+          "label": "Membership pathway",
+          "type": "select",
+          "required": false,
+          "options": [
+            "Enquiring",
+            "In preparation",
+            "Member",
+            "Transfer",
+            "Other"
+          ]
+        },
+        {
+          "id": "consent",
+          "label": "Consent to church follow-up",
+          "type": "checkbox",
+          "required": false
+        },
+        {
+          "id": "signature",
+          "label": "Signature",
+          "type": "signature",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "workers-information",
+      "title": "Church Worker Information Form",
+      "cadence": "As needed",
+      "category": "Volunteer administration",
+      "description": "Use for authorized volunteer coordination. Keep personal contact details restricted to appropriate church administrators.",
+      "fields": [
+        {
+          "id": "fullName",
+          "label": "Full name",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": "department",
+          "label": "Department",
+          "type": "select",
+          "required": true,
+          "options": [
+            "Children",
+            "Youth",
+            "Worship",
+            "Ushering",
+            "Media",
+            "Outreach",
+            "Prayer",
+            "Administration",
+            "Other"
+          ]
+        },
+        {
+          "id": "role",
+          "label": "Role",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": "phone",
+          "label": "Phone number",
+          "type": "tel",
+          "required": false
+        },
+        {
+          "id": "email",
+          "label": "Email address",
+          "type": "email",
+          "required": false
+        },
+        {
+          "id": "availability",
+          "label": "Availability",
+          "type": "textarea",
+          "required": false
+        },
+        {
+          "id": "emergencyContact",
+          "label": "Emergency contact (if required)",
+          "type": "text",
+          "required": false
+        },
+        {
+          "id": "reviewDate",
+          "label": "Review date",
+          "type": "date",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "monthly-department",
+      "title": "Monthly Department Report",
+      "cadence": "Monthly",
+      "category": "Department reporting",
+      "description": "Review monthly activities, attendance trends, needs and plans.",
+      "fields": [
+        {
+          "id": "reportMonth",
+          "label": "Reporting month",
+          "type": "month",
+          "required": true
+        },
+        {
+          "id": "department",
+          "label": "Department",
+          "type": "select",
+          "required": true,
+          "options": [
+            "Children",
+            "Youth",
+            "Worship",
+            "Ushering",
+            "Media",
+            "Outreach",
+            "Prayer",
+            "Administration",
+            "Other"
+          ]
+        },
+        {
+          "id": "preparedBy",
+          "label": "Prepared by",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": "activities",
+          "label": "Activities and outcomes",
+          "type": "textarea",
+          "required": true
+        },
+        {
+          "id": "participation",
+          "label": "Participation summary",
+          "type": "textarea",
+          "required": false
+        },
+        {
+          "id": "challenges",
+          "label": "Challenges",
+          "type": "textarea",
+          "required": false
+        },
+        {
+          "id": "resources",
+          "label": "Resources required",
+          "type": "textarea",
+          "required": false
+        },
+        {
+          "id": "nextMonth",
+          "label": "Plans for next month",
+          "type": "textarea",
+          "required": false
+        },
+        {
+          "id": "approvedBy",
+          "label": "Reviewed by",
+          "type": "text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "monthly-finance",
+      "title": "Monthly Finance Summary",
+      "cadence": "Monthly",
+      "category": "Finance reporting",
+      "description": "A summary template for authorized finance officers. Verify figures against approved records.",
+      "fields": [
+        {
+          "id": "reportMonth",
+          "label": "Reporting month",
+          "type": "month",
+          "required": true
+        },
+        {
+          "id": "currency",
+          "label": "Currency code",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": "openingBalance",
+          "label": "Opening balance",
+          "type": "number",
+          "required": false
+        },
+        {
+          "id": "income",
+          "label": "Total income",
+          "type": "number",
+          "required": true
+        },
+        {
+          "id": "expenditure",
+          "label": "Total expenditure",
+          "type": "number",
+          "required": true
+        },
+        {
+          "id": "closingBalance",
+          "label": "Closing balance",
+          "type": "number",
+          "required": false
+        },
+        {
+          "id": "preparedBy",
+          "label": "Prepared by",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": "verifiedBy",
+          "label": "Verified by",
+          "type": "text",
+          "required": false
+        },
+        {
+          "id": "variance",
+          "label": "Reconciliation notes",
+          "type": "textarea",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "attendance-summary",
+      "title": "Monthly Attendance Summary",
+      "cadence": "Monthly",
+      "category": "Service reporting",
+      "description": "Summarize attendance totals by service type without names or sensitive personal information.",
+      "fields": [
+        {
+          "id": "reportMonth",
+          "label": "Reporting month",
+          "type": "month",
+          "required": true
+        },
+        {
+          "id": "sundayServices",
+          "label": "Number of Sunday services",
+          "type": "number",
+          "required": false
+        },
+        {
+          "id": "averageAttendance",
+          "label": "Average in-person attendance",
+          "type": "number",
+          "required": false
+        },
+        {
+          "id": "childrenTotal",
+          "label": "Children total",
+          "type": "number",
+          "required": false
+        },
+        {
+          "id": "visitorTotal",
+          "label": "Visitor total",
+          "type": "number",
+          "required": false
+        },
+        {
+          "id": "midweekAverage",
+          "label": "Average midweek attendance",
+          "type": "number",
+          "required": false
+        },
+        {
+          "id": "preparedBy",
+          "label": "Prepared by",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": "notes",
+          "label": "Context or notes",
+          "type": "textarea",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "outreach-report",
+      "title": "Evangelism and Outreach Report",
+      "cadence": "Event-based",
+      "category": "Outreach reporting",
+      "description": "Capture outreach activity and agreed follow-up while respecting consent and privacy.",
+      "fields": [
+        {
+          "id": "eventDate",
+          "label": "Activity date",
+          "type": "date",
+          "required": true
+        },
+        {
+          "id": "location",
+          "label": "Location",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": "teamLead",
+          "label": "Team lead",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": "teamMembers",
+          "label": "Team members",
+          "type": "textarea",
+          "required": false
+        },
+        {
+          "id": "peopleReached",
+          "label": "People reached (count)",
+          "type": "number",
+          "required": false
+        },
+        {
+          "id": "materialsUsed",
+          "label": "Materials or activities",
+          "type": "textarea",
+          "required": false
+        },
+        {
+          "id": "followUpRequested",
+          "label": "Follow-up requests (count)",
+          "type": "number",
+          "required": false
+        },
+        {
+          "id": "nextSteps",
+          "label": "Agreed next steps",
+          "type": "textarea",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "event-planning",
+      "title": "Church Event Plan and Checklist",
+      "cadence": "Event-based",
+      "category": "Event planning",
+      "description": "Plan responsibilities, accessibility, safety and follow-up for a church event.",
+      "fields": [
+        {
+          "id": "eventName",
+          "label": "Event name",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": "eventDate",
+          "label": "Event date",
+          "type": "date",
+          "required": true
+        },
+        {
+          "id": "venue",
+          "label": "Venue",
+          "type": "text",
+          "required": false
+        },
+        {
+          "id": "coordinator",
+          "label": "Coordinator",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": "expectedAttendance",
+          "label": "Expected attendance",
+          "type": "number",
+          "required": false
+        },
+        {
+          "id": "accessibility",
+          "label": "Accessibility arrangements",
+          "type": "textarea",
+          "required": false
+        },
+        {
+          "id": "safetyPlan",
+          "label": "Safety and emergency arrangements",
+          "type": "textarea",
+          "required": false
+        },
+        {
+          "id": "budgetNeeds",
+          "label": "Approved budget/resources requested",
+          "type": "textarea",
+          "required": false
+        },
+        {
+          "id": "tasks",
+          "label": "Tasks and owners",
+          "type": "textarea",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "event-report",
+      "title": "Church Event Report",
+      "cadence": "Event-based",
+      "category": "Event reporting",
+      "description": "Document event outcomes, learnings and follow-up actions.",
+      "fields": [
+        {
+          "id": "eventName",
+          "label": "Event name",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": "eventDate",
+          "label": "Event date",
+          "type": "date",
+          "required": true
+        },
+        {
+          "id": "venue",
+          "label": "Venue",
+          "type": "text",
+          "required": false
+        },
+        {
+          "id": "preparedBy",
+          "label": "Prepared by",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": "attendance",
+          "label": "Attendance",
+          "type": "number",
+          "required": false
+        },
+        {
+          "id": "highlights",
+          "label": "Highlights and outcomes",
+          "type": "textarea",
+          "required": true
+        },
+        {
+          "id": "challenges",
+          "label": "Challenges",
+          "type": "textarea",
+          "required": false
+        },
+        {
+          "id": "followUp",
+          "label": "Follow-up actions and owners",
+          "type": "textarea",
+          "required": false
+        },
+        {
+          "id": "recommendations",
+          "label": "Recommendations",
+          "type": "textarea",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "pastoral-visit",
+      "title": "Pastoral Care Visit Record",
+      "cadence": "As needed",
+      "category": "Pastoral care",
+      "description": "Highly sensitive: record only with appropriate permission, keep details minimal and restrict access. Never store emergency or safeguarding reports here.",
+      "fields": [
+        {
+          "id": "visitDate",
+          "label": "Visit date",
+          "type": "date",
+          "required": true
+        },
+        {
+          "id": "visitor",
+          "label": "Authorized visitor",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": "personOrHousehold",
+          "label": "Person or household reference",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": "permission",
+          "label": "Permission to record this visit",
+          "type": "checkbox",
+          "required": true
+        },
+        {
+          "id": "supportOffered",
+          "label": "Support offered",
+          "type": "textarea",
+          "required": false
+        },
+        {
+          "id": "agreedFollowUp",
+          "label": "Agreed follow-up",
+          "type": "textarea",
+          "required": false
+        },
+        {
+          "id": "followUpDate",
+          "label": "Follow-up date",
+          "type": "date",
+          "required": false
+        },
+        {
+          "id": "confidentialityNote",
+          "label": "Confidentiality handling confirmed",
+          "type": "checkbox",
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "incident-report",
+      "title": "Safety or Incident Report",
+      "cadence": "As needed",
+      "category": "Safety reporting",
+      "description": "For authorized leaders. Record objective facts only and follow the church safeguarding and emergency reporting process immediately.",
+      "fields": [
+        {
+          "id": "incidentDate",
+          "label": "Incident date",
+          "type": "date",
+          "required": true
+        },
+        {
+          "id": "reportDate",
+          "label": "Report date",
+          "type": "date",
+          "required": true
+        },
+        {
+          "id": "location",
+          "label": "Location",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": "reportedBy",
+          "label": "Reported by",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": "incidentType",
+          "label": "Incident type",
+          "type": "select",
+          "required": true,
+          "options": [
+            "Safety concern",
+            "Property issue",
+            "Medical response",
+            "Near miss",
+            "Other"
+          ]
+        },
+        {
+          "id": "description",
+          "label": "Factual description",
+          "type": "textarea",
+          "required": true
+        },
+        {
+          "id": "immediateAction",
+          "label": "Immediate action taken",
+          "type": "textarea",
+          "required": false
+        },
+        {
+          "id": "referredTo",
+          "label": "Reported to authorized lead",
+          "type": "text",
+          "required": false
+        },
+        {
+          "id": "followUp",
+          "label": "Follow-up required",
+          "type": "textarea",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "facility-request",
+      "title": "Facility and Supplies Request",
+      "cadence": "As needed",
+      "category": "Operations",
+      "description": "Request maintenance, room setup or supplies through the appropriate church contact.",
+      "fields": [
+        {
+          "id": "requestDate",
+          "label": "Request date",
+          "type": "date",
+          "required": true
+        },
+        {
+          "id": "requestedBy",
+          "label": "Requested by",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": "department",
+          "label": "Department",
+          "type": "text",
+          "required": false
+        },
+        {
+          "id": "requestType",
+          "label": "Request type",
+          "type": "select",
+          "required": true,
+          "options": [
+            "Room setup",
+            "Maintenance",
+            "Equipment",
+            "Supplies",
+            "Accessibility",
+            "Other"
+          ]
+        },
+        {
+          "id": "neededBy",
+          "label": "Needed by",
+          "type": "date",
+          "required": false
+        },
+        {
+          "id": "details",
+          "label": "Request details",
+          "type": "textarea",
+          "required": true
+        },
+        {
+          "id": "priority",
+          "label": "Priority",
+          "type": "radio",
+          "required": true,
+          "options": [
+            "Routine",
+            "Soon",
+            "Urgent"
+          ]
+        },
+        {
+          "id": "assignedTo",
+          "label": "Assigned to",
+          "type": "text",
+          "required": false
+        },
+        {
+          "id": "status",
+          "label": "Status",
+          "type": "select",
+          "required": false,
+          "options": [
+            "New",
+            "In progress",
+            "Completed",
+            "Deferred"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "volunteer-rota",
+      "title": "Weekly Volunteer Duty Roster",
+      "cadence": "Weekly",
+      "category": "Volunteer administration",
+      "description": "Plan service responsibilities and confirm volunteers have agreed to their assignments.",
+      "fields": [
+        {
+          "id": "serviceDate",
+          "label": "Service date",
+          "type": "date",
+          "required": true
+        },
+        {
+          "id": "serviceName",
+          "label": "Service",
+          "type": "select",
+          "required": true,
+          "options": [
+            "Sunday morning",
+            "Sunday evening",
+            "Midweek",
+            "Special service"
+          ]
+        },
+        {
+          "id": "department",
+          "label": "Department",
+          "type": "select",
+          "required": true,
+          "options": [
+            "Welcome",
+            "Ushering",
+            "Children",
+            "Worship",
+            "Media",
+            "Prayer",
+            "Other"
+          ]
+        },
+        {
+          "id": "coordinator",
+          "label": "Coordinator",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": "assignments",
+          "label": "Roles and agreed assignments",
+          "type": "textarea",
+          "required": true
+        },
+        {
+          "id": "coverNeeded",
+          "label": "Coverage needed",
+          "type": "textarea",
+          "required": false
+        },
+        {
+          "id": "confirmationDate",
+          "label": "Last confirmation date",
+          "type": "date",
+          "required": false
+        }
+      ]
+    }
+  ]
+}
