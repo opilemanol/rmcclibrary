@@ -3,6 +3,10 @@
 
     <!-- Automatically generated file. DO NOT MODIFY -->
 
+    <!-- Value from build type: debug -->
+    <string name="admobAppId" translatable="false">ca-app-pub-3940256099942544~3347511713</string>
+    <!-- Value from build type: debug -->
+    <string name="admobBannerAdUnitId" translatable="false">ca-app-pub-3940256099942544/9214589741</string>
     <!-- Value from default config. -->
     <bool name="enableNotification">true</bool>
     <!-- Value from default config. -->
@@ -24,7 +28,7 @@
     <!-- Value from default config. -->
     <integer name="splashScreenFadeOutDuration">300</integer>
     <!-- Value from default config. -->
-    <string name="appName" translatable="false">RMCC Library</string>
+    <string name="appName" translatable="false">RMCC Church Library</string>
     <!-- Value from default config. -->
     <string name="fallbackType" translatable="false">customtabs</string>
     <!-- Value from default config. -->

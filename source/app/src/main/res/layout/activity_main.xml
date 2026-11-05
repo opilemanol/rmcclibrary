@@ -1,88 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
-    tools:context=".LauncherActivity">
+    android:background="#F5F7FB"
+    android:orientation="vertical">
 
     <WebView
         android:id="@+id/webview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/adView"
-        android:visibility="gone" />
-
-    <LinearLayout
-        android:id="@+id/splash_layout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/adView"
-        android:background="#FFFFFF"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:visibility="visible">
-
-        <ImageView
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:src="@mipmap/ic_launcher" />
-
-        <ProgressBar
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/offline_layout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/adView"
-        android:background="#FFFFFF"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:padding="30dp"
-        android:visibility="gone">
-
-        <ImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@android:drawable/ic_menu_info_details" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="Library Offline"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            android:textColor="#333333" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_marginTop="10dp"
-            android:text="Connect to the internet to read the latest sermons."
-            android:textSize="16sp" />
-
-        <Button
-            android:id="@+id/btn_retry"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:text="Refresh Library" />
-    </LinearLayout>
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#F5F7FB" />
 
     <com.google.android.gms.ads.AdView
         android:id="@+id/adView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
         app:adSize="BANNER"
-        app:adUnitId="ca-app-pub-5927630860510493/5090926876" />
-
-</RelativeLayout>
+        app:adUnitId="@string/admobBannerAdUnitId" />
+</LinearLayout>

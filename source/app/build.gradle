@@ -24,7 +24,7 @@ def twaManifest = [
     applicationId: 'app.hosted.us_central1.studio__studio_6860217494_f174b.twa',
     hostName: 'studio--studio-6860217494-f174b.us-central1.hosted.app', // The domain being opened in the TWA.
     launchUrl: '/', // The start path for the TWA. Must be relative to the domain.
-    name: 'RMCC Library', // The application name.
+    name: 'RMCC Church Library', // The application name.
     launcherName: 'RMCC Library', // The name shown on the Android Launcher.
     themeColor: '#74A3BC', // The color used for the status bar.
     themeColorDark: '#74A3BC', // The color used for the dark status bar.
@@ -50,8 +50,19 @@ def twaManifest = [
     orientation: 'default',
 ]
 
-android {
+def adMobConfig = [
+    productionAppId: 'ca-app-pub-5927630860510493~2568705315',
+    productionBannerId: 'ca-app-pub-5927630860510493/5090926876',
+    testInterstitialId: 'ca-app-pub-3940256099942544/1033173712',
+    testAppId: 'ca-app-pub-3940256099942544~3347511713',
+    testBannerId: 'ca-app-pub-3940256099942544/9214589741',
+]
+def releaseInterstitialId = providers.gradleProperty('admobReleaseInterstitialAdUnitId').getOrElse('')
 
+android {
+    buildFeatures {
+        buildConfig true
+    }
 
 
     signingConfigs {
@@ -65,9 +76,17 @@ android {
     }
 
     buildTypes {
+        debug {
+            resValue "string", "admobAppId", adMobConfig.testAppId
+            resValue "string", "admobBannerAdUnitId", adMobConfig.testBannerId
+            buildConfigField "String", "INTERSTITIAL_AD_UNIT_ID", "\"${adMobConfig.testInterstitialId}\""
+        }
         release {
             signingConfig signingConfigs.release
             minifyEnabled false
+            resValue "string", "admobAppId", adMobConfig.productionAppId
+            resValue "string", "admobBannerAdUnitId", adMobConfig.productionBannerId
+            buildConfigField "String", "INTERSTITIAL_AD_UNIT_ID", "\"${releaseInterstitialId}\""
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -220,7 +239,32 @@ task generateShorcutsFile {
     shortcutsFile.text = xmlWriter.toString() + '\n'
 }
 
-preBuild.dependsOn(generateShorcutsFile)
+def webProjectDir = file("$rootDir/../web")
+
+tasks.register("buildWebApp", Exec) {
+    workingDir webProjectDir
+    commandLine "npm", "run", "build"
+}
+
+tasks.register("copyWebApp", Sync) {
+    dependsOn tasks.named("buildWebApp")
+    from("$webProjectDir/out")
+    into("$projectDir/src/main/assets")
+}
+
+preBuild.dependsOn(generateShorcutsFile, tasks.named("copyWebApp"))
+
+tasks.register("verifyReleaseInterstitialAd") {
+    doLast {
+        if (releaseInterstitialId.trim().isEmpty()) {
+            throw new GradleException("Set -PadmobReleaseInterstitialAdUnitId to the church's AdMob interstitial unit before building a release.")
+        }
+    }
+}
+
+tasks.matching { it.name == "preReleaseBuild" }.configureEach {
+    dependsOn tasks.named("verifyReleaseInterstitialAd")
+}
 
 repositories {
     

@@ -1,168 +1,331 @@
 package app.hosted.us_central1.studio__studio_6860217494_f174b.twa;
 
+import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Base64;
 import android.view.View;
 import android.webkit.JavascriptInterface;
+import android.webkit.WebResourceRequest;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
-import android.webkit.WebViewClient;
-import android.widget.Button;
-import android.widget.LinearLayout;
 import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.FileProvider;
+import androidx.webkit.WebViewAssetLoader;
+import androidx.webkit.WebViewClientCompat;
+import androidx.webkit.WebResourceErrorCompat;
+
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.AdError;
+import com.google.android.gms.ads.FullScreenContentCallback;
+import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.interstitial.InterstitialAd;
+import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
+import org.json.JSONObject;
+
 public class LauncherActivity extends AppCompatActivity {
 
-    private WebView myWebView;
-    private AdView mAdView;
-    private LinearLayout offlineLayout, splashLayout;
-    private Button btnRetry;
-    private final String APP_URL = "https://studio--studio-6860217494-f174b.us-central1.hosted.app/";
+    private static final String APP_URL = "https://appassets.androidplatform.net/index.html";
+    private static final int MAX_PDF_BYTES = 15 * 1024 * 1024;
+    private WebView webView;
+    private AdView adView;
+    private WebViewAssetLoader assetLoader;
+    private InterstitialAd interstitialAd;
+    private boolean interstitialLoading;
+    private String pendingShareRequest;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // 1. Initialize Views
-        myWebView = findViewById(R.id.webview);
-        offlineLayout = findViewById(R.id.offline_layout);
-        splashLayout = findViewById(R.id.splash_layout);
-        btnRetry = findViewById(R.id.btn_retry);
+        webView = findViewById(R.id.webview);
+        adView = findViewById(R.id.adView);
+        assetLoader = new WebViewAssetLoader.Builder()
+                .addPathHandler("/", new WebViewAssetLoader.AssetsPathHandler(this))
+                .build();
 
-        // 2. Initialize AdMob
-        MobileAds.initialize(this, initializationStatus -> {});
-        mAdView = findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
+        WebSettings settings = webView.getSettings();
+        settings.setJavaScriptEnabled(true);
+        settings.setDomStorageEnabled(true);
+        settings.setDatabaseEnabled(true);
+        settings.setAllowFileAccess(false);
+        settings.setAllowContentAccess(false);
 
-        // 3. Setup WebView
-        WebSettings webSettings = myWebView.getSettings();
-        webSettings.setJavaScriptEnabled(true);
-        webSettings.setDomStorageEnabled(true);
-        webSettings.setDatabaseEnabled(true);
-        
-        myWebView.addJavascriptInterface(new WebAppInterface(), "AndroidShare");
-
-        myWebView.setWebViewClient(new WebViewClient() {
+        webView.addJavascriptInterface(new WebAppInterface(this), "AndroidShare");
+        webView.setWebViewClient(new WebViewClientCompat() {
             @Override
-            public void onPageFinished(WebView view, String url) {
-                splashLayout.setVisibility(View.GONE);
-                offlineLayout.setVisibility(View.GONE);
-                myWebView.setVisibility(View.VISIBLE);
+            public android.webkit.WebResourceResponse shouldInterceptRequest(
+                    WebView view, WebResourceRequest request) {
+                return assetLoader.shouldInterceptRequest(request.getUrl());
             }
 
             @Override
-            public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
-                showOffline();
+            public android.webkit.WebResourceResponse shouldInterceptRequest(WebView view, String url) {
+                return assetLoader.shouldInterceptRequest(Uri.parse(url));
+            }
+
+            @Override
+            public void onReceivedError(WebView view, WebResourceRequest request, WebResourceErrorCompat error) {
+                if (request.isForMainFrame()) {
+                    runOnUiThread(() -> Toast.makeText(
+                            LauncherActivity.this,
+                            "The bundled library could not be opened. Please restart the app.",
+                            Toast.LENGTH_LONG
+                    ).show());
+                }
             }
         });
 
-        btnRetry.setOnClickListener(v -> startApp());
-
-        // 4. Start Logic
-        startApp();
-    }
-
-    private void startApp() {
-        if (isNetworkAvailable()) {
-            offlineLayout.setVisibility(View.GONE);
-            splashLayout.setVisibility(View.VISIBLE);
-            myWebView.loadUrl(APP_URL);
-        } else {
-            showOffline();
-        }
-    }
-
-    private void showOffline() {
-        myWebView.setVisibility(View.GONE);
-        splashLayout.setVisibility(View.GONE);
-        offlineLayout.setVisibility(View.VISIBLE);
-    }
-
-    private boolean isNetworkAvailable() {
-        ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
-        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
-    }
-
-    public class WebAppInterface {
-        
-        // Your old text sharing option remains untouched
-        @JavascriptInterface
-        public void share(String title, String text, String url) {
-            Intent shareIntent = new Intent(Intent.ACTION_SEND);
-            shareIntent.setType("text/plain");
-            shareIntent.putExtra(Intent.EXTRA_SUBJECT, title);
-            shareIntent.putExtra(Intent.EXTRA_TEXT, text + " " + url);
-            startActivity(Intent.createChooser(shareIntent, "Share Sermon/Devotional"));
+        MobileAds.initialize(this, initializationStatus -> runOnUiThread(this::loadInterstitialAd));
+        if (adView != null) {
+            adView.loadAd(new AdRequest.Builder().build());
         }
 
-        // NEW METHOD: Call this method from web app JavaScript to trigger PDF sharing
-        @JavascriptInterface
-        public void sharePDF(String base64Pdf, String fileName) {
-            try {
-                // If the string contains data URI prefix (e.g. "data:application/pdf;base64,"), strip it away
-                if (base64Pdf.contains(",")) {
-                    base64Pdf = base64Pdf.split(",")[1];
-                }
+        webView.setVisibility(View.VISIBLE);
+        webView.loadUrl(APP_URL);
+    }
 
-                // Decode base64 to byte array
-                byte[] pdfAsBytes = Base64.decode(base64Pdf, Base64.DEFAULT);
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (adView != null) adView.resume();
+        if (webView != null) webView.onResume();
+    }
 
-                // Save PDF to internal app cache (no storage permission needed!)
-                File cachePath = new File(getCacheDir(), "shared_pdfs");
-                cachePath.mkdirs(); // Ensure directory exists
-                File pdfFile = new File(cachePath, fileName != null ? fileName : "Document.pdf");
-                
-                FileOutputStream stream = new FileOutputStream(pdfFile);
-                stream.write(pdfAsBytes);
-                stream.close();
+    @Override
+    protected void onPause() {
+        if (adView != null) adView.pause();
+        if (webView != null) webView.onPause();
+        super.onPause();
+    }
 
-                // Get secure content URI via FileProvider
-                Uri contentUri = FileProvider.getUriForFile(
-                        LauncherActivity.this, 
-                        getPackageName() + ".fileprovider", 
-                        pdfFile
-                );
-
-                if (contentUri != null) {
-                    Intent shareIntent = new Intent(Intent.ACTION_SEND);
-                    shareIntent.setType("application/pdf");
-                    shareIntent.putExtra(Intent.EXTRA_STREAM, contentUri);
-                    
-                    // Grant permission temporarily to any receiving app
-                    shareIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-                    
-                    startActivity(Intent.createChooser(shareIntent, "Share Form PDF via"));
-                }
-
-            } catch (IOException e) {
-                e.printStackTrace();
-                runOnUiThread(() -> Toast.makeText(LauncherActivity.this, "Failed to prepare PDF for sharing", Toast.LENGTH_SHORT).show());
-            }
+    @Override
+    protected void onDestroy() {
+        if (adView != null) adView.destroy();
+        if (webView != null) {
+            webView.removeJavascriptInterface("AndroidShare");
+            webView.destroy();
         }
+        super.onDestroy();
     }
 
     @Override
     public void onBackPressed() {
-        if (myWebView.canGoBack() && myWebView.getVisibility() == View.VISIBLE) {
-            myWebView.goBack();
-        } else {
-            super.onBackPressed();
+        if (webView != null && webView.canGoBack()) {
+            webView.goBack();
+            return;
+        }
+        if (webView != null) {
+            webView.evaluateJavascript(
+                    "window.rmccHandleBack ? window.rmccHandleBack() : false",
+                    result -> {
+                        if (!"true".equals(result)) LauncherActivity.super.onBackPressed();
+                    }
+            );
+            return;
+        }
+        super.onBackPressed();
+    }
+
+    private void sharePdf(File file) {
+        try {
+            Uri contentUri = FileProvider.getUriForFile(
+                    this,
+                    getPackageName() + ".fileprovider",
+                    file
+            );
+            Intent intent = new Intent(Intent.ACTION_SEND);
+            intent.setType("application/pdf");
+            intent.putExtra(Intent.EXTRA_STREAM, contentUri);
+            intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+            startActivity(Intent.createChooser(intent, "Share RMCC document"));
+        } catch (ActivityNotFoundException | IllegalArgumentException error) {
+            Toast.makeText(this, "No app is available to share this PDF.", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    private void showShareError() {
+        Toast.makeText(this, "Could not prepare the document for sharing.", Toast.LENGTH_SHORT).show();
+    }
+
+    private void loadInterstitialAd() {
+        String adUnitId = BuildConfig.INTERSTITIAL_AD_UNIT_ID;
+        if (adUnitId == null || adUnitId.trim().isEmpty() || interstitialLoading || interstitialAd != null) return;
+        interstitialLoading = true;
+        InterstitialAd.load(this, adUnitId, new AdRequest.Builder().build(), new InterstitialAdLoadCallback() {
+            @Override
+            public void onAdLoaded(InterstitialAd ad) {
+                interstitialLoading = false;
+                interstitialAd = ad;
+                if (pendingShareRequest != null) showInterstitialForRequest(pendingShareRequest);
+            }
+
+            @Override
+            public void onAdFailedToLoad(LoadAdError error) {
+                interstitialLoading = false;
+                interstitialAd = null;
+                if (pendingShareRequest != null) {
+                    String requestId = pendingShareRequest;
+                    pendingShareRequest = null;
+                    notifyWebAdResult(requestId, false);
+                }
+            }
+        });
+    }
+
+    private void showInterstitialForRequest(String requestId) {
+        InterstitialAd ad = interstitialAd;
+        if (ad == null || requestId == null) {
+            notifyWebAdResult(requestId, false);
+            return;
+        }
+        interstitialAd = null;
+        pendingShareRequest = null;
+        ad.setFullScreenContentCallback(new FullScreenContentCallback() {
+            @Override
+            public void onAdShowedFullScreenContent() {
+                notifyWebAdShown(requestId);
+            }
+
+            @Override
+            public void onAdDismissedFullScreenContent() {
+                notifyWebAdResult(requestId, true);
+                loadInterstitialAd();
+            }
+
+            @Override
+            public void onAdFailedToShowFullScreenContent(AdError error) {
+                notifyWebAdResult(requestId, false);
+                loadInterstitialAd();
+            }
+        });
+        try {
+            ad.show(LauncherActivity.this);
+        } catch (RuntimeException error) {
+            notifyWebAdResult(requestId, false);
+            loadInterstitialAd();
+        }
+    }
+
+    private void notifyWebAdResult(String requestId, boolean shown) {
+        if (webView == null || requestId == null) return;
+        String quotedId = JSONObject.quote(requestId);
+        webView.evaluateJavascript(
+                "window.onNativeAdResult && window.onNativeAdResult(" + quotedId + "," + shown + ")",
+                null
+        );
+    }
+
+    private void notifyWebAdShown(String requestId) {
+        if (webView == null || requestId == null) return;
+        String quotedId = JSONObject.quote(requestId);
+        webView.evaluateJavascript(
+                "window.onNativeAdShown && window.onNativeAdShown(" + quotedId + ")",
+                null
+        );
+    }
+
+    public class WebAppInterface {
+        private final Context context;
+
+        WebAppInterface(Context context) {
+            this.context = context;
+        }
+
+        @JavascriptInterface
+        public void showInterstitial(String requestId) {
+            runOnUiThread(() -> {
+                if (requestId == null || requestId.length() > 80 || interstitialLoading) {
+                    notifyWebAdResult(requestId, false);
+                    return;
+                }
+                if (interstitialAd != null) {
+                    showInterstitialForRequest(requestId);
+                } else {
+                    pendingShareRequest = requestId;
+                    loadInterstitialAd();
+                    if (!interstitialLoading && pendingShareRequest != null) {
+                        pendingShareRequest = null;
+                        notifyWebAdResult(requestId, false);
+                    }
+                }
+            });
+        }
+
+        @JavascriptInterface
+        public void cancelInterstitial(String requestId) {
+            runOnUiThread(() -> {
+                if (requestId != null && requestId.equals(pendingShareRequest)) {
+                    pendingShareRequest = null;
+                }
+            });
+        }
+
+        @JavascriptInterface
+        public void share(String title, String text, String url) {
+            runOnUiThread(() -> {
+                Intent intent = new Intent(Intent.ACTION_SEND);
+                intent.setType("text/plain");
+                intent.putExtra(Intent.EXTRA_SUBJECT, title);
+                intent.putExtra(Intent.EXTRA_TEXT, (text == null ? "" : text) + (url == null || url.isEmpty() ? "" : " " + url));
+                try {
+                    context.startActivity(Intent.createChooser(intent, "Share RMCC resource"));
+                } catch (ActivityNotFoundException error) {
+                    Toast.makeText(context, "No app is available to share this resource.", Toast.LENGTH_SHORT).show();
+                }
+            });
+        }
+
+        @JavascriptInterface
+        public void sharePDF(String base64Pdf, String fileName) {
+            try {
+                if (base64Pdf == null || base64Pdf.length() > 22 * 1024 * 1024) {
+                    throw new IllegalArgumentException("PDF is too large.");
+                }
+                int separator = base64Pdf.indexOf(',');
+                String encoded = separator >= 0 ? base64Pdf.substring(separator + 1) : base64Pdf;
+                byte[] bytes = Base64.decode(encoded, Base64.DEFAULT);
+                if (bytes.length == 0 || bytes.length > MAX_PDF_BYTES) {
+                    throw new IllegalArgumentException("Invalid PDF size.");
+                }
+
+                File cacheDirectory = new File(getCacheDir(), "shared_pdfs");
+                if (!cacheDirectory.exists() && !cacheDirectory.mkdirs()) {
+                    throw new IOException("Unable to create the PDF cache.");
+                }
+                File[] cachedFiles = cacheDirectory.listFiles();
+                if (cachedFiles != null) {
+                    long expiration = System.currentTimeMillis() - 24L * 60L * 60L * 1000L;
+                    for (File cachedFile : cachedFiles) {
+                        if (cachedFile.isFile() && cachedFile.lastModified() < expiration) {
+                            cachedFile.delete();
+                        }
+                    }
+                }
+                String safeName = fileName == null ? "RMCC-Document.pdf" : fileName.replaceAll("[^A-Za-z0-9._-]", "_");
+                if (safeName.isEmpty() || !safeName.toLowerCase().endsWith(".pdf")) {
+                    safeName = "RMCC-Document.pdf";
+                }
+                File pdfFile = new File(cacheDirectory, safeName);
+                try (FileOutputStream stream = new FileOutputStream(pdfFile)) {
+                    stream.write(bytes);
+                }
+                runOnUiThread(() -> sharePdf(pdfFile));
+            } catch (IOException | IllegalArgumentException error) {
+                runOnUiThread(LauncherActivity.this::showShareError);
+            }
         }
     }
 }

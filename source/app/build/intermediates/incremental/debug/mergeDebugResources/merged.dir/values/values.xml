@@ -328,8 +328,10 @@
     <string name="abc_shareactionprovider_share_with">Share with</string>
     <string name="abc_shareactionprovider_share_with_application">Share with <ns1:g example="Mail" id="application_name">%s</ns1:g></string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
+    <string name="admobAppId" translatable="false">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="admobBannerAdUnitId" translatable="false">ca-app-pub-3940256099942544/9214589741</string>
     <string name="androidx_startup" translatable="false">androidx.startup</string>
-    <string name="appName" translatable="false">RMCC Library</string>
+    <string name="appName" translatable="false">RMCC Church Library</string>
     <string name="app_name">Android Browser Helper</string>
     <string name="assetStatements">
     [{

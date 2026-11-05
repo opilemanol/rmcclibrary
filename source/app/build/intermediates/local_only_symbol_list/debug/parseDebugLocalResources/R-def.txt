@@ -14,14 +14,13 @@ drawable ic_notification_icon
 drawable shortcut_legacy_background
 drawable splash
 id adView
-id btn_retry
-id offline_layout
-id splash_layout
 id webview
 integer splashScreenFadeOutDuration
 layout activity_main
 mipmap ic_launcher
 raw web_app_manifest
+string admobAppId
+string admobBannerAdUnitId
 string appName
 string assetStatements
 string fallbackType

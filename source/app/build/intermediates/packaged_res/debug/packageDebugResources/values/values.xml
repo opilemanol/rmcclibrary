@@ -11,7 +11,9 @@
     <color name="navigationDividerColorDark">#74A3BC</color>
     <color name="shortcut_background">#F5F5F5</color>
     <integer name="splashScreenFadeOutDuration">300</integer>
-    <string name="appName" translatable="false">RMCC Library</string>
+    <string name="admobAppId" translatable="false">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="admobBannerAdUnitId" translatable="false">ca-app-pub-3940256099942544/9214589741</string>
+    <string name="appName" translatable="false">RMCC Church Library</string>
     <string name="assetStatements">
     [{
         \"relation\": [\"delegate_permission/common.handle_all_urls\"],

@@ -783,7 +783,6 @@ id browser_actions_menu_item_icon
 id browser_actions_menu_item_text
 id browser_actions_menu_items
 id browser_actions_menu_view
-id btn_retry
 id buttonPanel
 id center_vertical
 id checkbox
@@ -836,7 +835,6 @@ id off
 id offline_dialog_advertiser_name
 id offline_dialog_image
 id offline_dialog_text
-id offline_layout
 id on
 id parentPanel
 id progress_circular
@@ -866,7 +864,6 @@ id showHome
 id showTitle
 id spacer
 id special_effects_controller_view_tag
-id splash_layout
 id split_action_bar
 id src_atop
 id src_in
@@ -1000,6 +997,8 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string admobAppId
+string admobBannerAdUnitId
 string androidx_startup
 string appName
 string app_name
