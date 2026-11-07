@@ -29,6 +29,7 @@ test("all nine bundled libraries have their required records and unique IDs", as
 test("each teaching library has a clearly marked original sample and placeholder entries", async () => {
   for (const [fileName, [collectionName]] of expected) {
     if (fileName === "reports-forms.json") continue;
+    if (["baptismal-course.json", "discipleship-course.json"].includes(fileName)) continue;
     const library = JSON.parse(await readFile(new URL(`../public/data/${fileName}`, import.meta.url), "utf8"));
     const entries = library[collectionName];
     assert.ok(entries.some((item) => item.contentStatus === "sample"), `${fileName} must have sample entries`);

@@ -5,172 +5,243 @@
     {
       "id": "discipleship-001",
       "moduleNumber": 1,
-      "title": "Sample Module: Building a Sustainable Practice",
-      "description": "A practical demonstration module for reflecting, learning and making room for support.",
+      "title": "Lesson 1: Understanding Salvation",
+      "description": "Explore sin, God's redemptive plan, salvation by grace, and the evidence of genuine conversion.",
       "scriptureReferences": [
-        "Mark 1:35; Luke 10:38–42"
+        "Romans 3:23; Ephesians 2:8–10; John 3:3; Romans 5:1; 2 Corinthians 5:17"
       ],
-      "memoryVerse": "Luke 10:42",
-      "introduction": "This module is an editable sample, not a complete or official discipleship curriculum.",
+      "memoryVerse": "2 Corinthians 5:17",
+      "introduction": "Salvation is God's work of delivering humanity from sin and restoring relationship with Himself through Jesus Christ. It is not church attendance, moral reform, or family inheritance.",
       "lessons": [
         {
-          "title": "Choose a realistic rhythm",
-          "content": "Identify a small practice that fits your current responsibilities, such as a short reading, reflection or service activity. Adapt it when life circumstances change."
+          "title": "The problem of sin and God's rescue",
+          "content": "Sin is rebellion against God and has spiritual and relational consequences. Salvation is God's rescue through Christ, received by grace through faith, not earned by works."
+        },
+        {
+          "title": "Justification, regeneration, and adoption",
+          "content": "In Christ, God declares believers righteous, gives new spiritual life, and welcomes them into His family with access, inheritance, intimacy, and identity."
+        },
+        {
+          "title": "Assurance and evidence of conversion",
+          "content": "Assurance rests on God's promises, Christ's finished work, and the Spirit's witness. Genuine conversion produces new desires, obedience, love for others, and progressive growth. Zacchaeus illustrates changed behavior and restitution."
         }
       ],
       "discussionQuestions": [
-        "What practice feels realistic rather than burdensome?",
-        "Who could support you if the routine changes?"
+        "Why is understanding sin important for understanding salvation?",
+        "What is the difference between justification and regeneration?",
+        "Why can good works never earn salvation?",
+        "What practical signs of transformation can a believer identify?"
       ],
       "reviewQuestions": [
-        "What adjustment would make this practice sustainable?"
+        "How is salvation received?",
+        "Name three biblical evidences of genuine conversion."
       ],
       "assignments": [
-        "Try one small practice for a week and note what helped or hindered it."
+        "Memorize Ephesians 2:8–9.",
+        "Write a testimony describing life before Christ, how you met Him, and what has changed."
       ],
-      "conclusion": "Review the experience with curiosity, not shame, and decide whether to continue or adapt.",
-      "contentStatus": "sample"
+      "conclusion": "Salvation is God's loving rescue through the finished work of Jesus, received by grace through faith and resulting in a transformed life.",
+      "contentStatus": "provided"
     },
     {
       "id": "discipleship-002",
       "moduleNumber": 2,
-      "title": "Sample Module: Serving with Care",
-      "description": "A discussion module on practical, respectful service.",
+      "title": "Lesson 2: What is a Disciple?",
+      "description": "Move from church attendance to intentionally following Christ and helping others follow Him.",
       "scriptureReferences": [
-        "Mark 10:45; Philippians 2:3–4"
+        "Matthew 28:19–20; Luke 6:40; Luke 9:23–25; John 15:1–8; Acts 11:26; 2 Timothy 2:2"
       ],
-      "memoryVerse": "Philippians 2:4",
-      "introduction": "Use church-approved teaching for the full course. This sample offers one structured reflection.",
+      "memoryVerse": "Matthew 28:19",
+      "introduction": "Salvation brings people into God's family; discipleship forms them into Christ's likeness. Jesus commanded His followers to make disciples, not merely gather attendees.",
       "lessons": [
         {
-          "title": "Ask before offering help",
-          "content": "Consider how consent, safety and listening shape helpful service. Ask what the person actually needs and respect their answer."
+          "title": "A disciple follows to become like Christ",
+          "content": "The Greek word mathetes means learner, student, or apprentice. A disciple intentionally learns from Christ, obeys His Word, and helps others follow Him."
+        },
+        {
+          "title": "Count the cost and abide in Christ",
+          "content": "Jesus calls disciples to deny themselves, take up the cross daily, and follow Him. Abiding in Christ is the source of fruitfulness, prayer, and spiritual vitality."
+        },
+        {
+          "title": "Multiply through community and commitment",
+          "content": "The early church practiced teaching, fellowship, and prayer. Paul described a four-generation pattern of passing truth to faithful people who teach others. Use mentorship, small groups, and accountability to support growth."
         }
       ],
       "discussionQuestions": [
-        "How can service preserve another person’s dignity?",
-        "When might a referral to an experienced service be safer than trying to solve a problem alone?"
+        "What distinguishes a disciple from a regular church attendee?",
+        "Why did Jesus emphasize the cost of following Him?",
+        "Who is discipling you, and whom are you helping to follow Christ?"
       ],
       "reviewQuestions": [
-        "What is one question you can ask before offering help?"
+        "What does the word disciple mean?",
+        "Name two practices that help a disciple grow and multiply."
       ],
       "assignments": [
-        "Identify one local service or trusted church contact that can guide a complex request for help."
+        "Memorize Luke 9:23.",
+        "Write a personal discipleship commitment and identify one person for accountability and one person to encourage."
       ],
-      "conclusion": "Responsible service includes knowing when to seek experienced support.",
-      "contentStatus": "sample"
+      "conclusion": "Discipleship is a daily path of learning, obedience, abiding in Christ, and helping others follow Him.",
+      "contentStatus": "provided"
     },
     {
       "id": "discipleship-003",
       "moduleNumber": 3,
-      "title": "Discipleship Module 03",
-      "description": "Awaiting church-approved content.",
+      "title": "Lesson 3: The Lordship of Jesus Christ",
+      "description": "Understand Christ's authority over every area of a believer's life.",
       "scriptureReferences": [
-        "Awaiting church-approved content."
+        "Romans 10:9; 1 Corinthians 6:19–20; Matthew 7:21; Luke 22:42; Philippians 2:9–11"
       ],
-      "memoryVerse": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
+      "memoryVerse": "Philippians 2:11",
+      "introduction": "Many accept Jesus as Savior, but fewer submit to Him as Lord. Salvation brings forgiveness; lordship concerns authority, allegiance, and obedience.",
       "lessons": [
         {
-          "title": "Awaiting church-approved content.",
-          "content": "Awaiting church-approved content."
+          "title": "What it means to call Jesus Lord",
+          "content": "Lord means master, owner, and sovereign ruler. Confessing Jesus as Lord declares that we belong to Him and submit our will to His authority."
+        },
+        {
+          "title": "Dimensions of Christ's lordship",
+          "content": "Christ's authority shapes the mind, will, body, possessions, and relationships. Partial obedience is still resistance; lordship includes practical surrender in daily decisions."
+        },
+        {
+          "title": "Practice daily surrender",
+          "content": "Begin with surrender in prayer, make decisions through Scripture, obey promptly, invite accountability, and regularly examine motives. Lordship brings direction, peace, and fruitfulness."
         }
       ],
       "discussionQuestions": [
-        "Awaiting church-approved content."
+        "Why can Jesus not be Savior without being Lord?",
+        "Which area of life is hardest to submit to Christ?",
+        "How does lordship affect daily decisions?"
       ],
       "reviewQuestions": [
-        "Awaiting church-approved content."
+        "What does the word Lord communicate about Jesus?",
+        "Name three areas shaped by Christ's lordship."
       ],
       "assignments": [
-        "Awaiting church-approved content."
+        "Memorize Romans 10:9.",
+        "Write down areas of your life and surrender them in prayer; take one step on a delayed act of obedience."
       ],
-      "conclusion": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
+      "conclusion": "The same Jesus who saves is Lord. Surrender to His authority in every area and follow Him in daily obedience.",
+      "contentStatus": "provided"
     },
     {
       "id": "discipleship-004",
       "moduleNumber": 4,
-      "title": "Discipleship Module 04",
-      "description": "Awaiting church-approved content.",
+      "title": "Lesson 4: Repentance, Faith & Identity in Christ",
+      "description": "Turn from sin, trust Christ, and embrace your new identity in Him.",
       "scriptureReferences": [
-        "Awaiting church-approved content."
+        "Acts 20:21; 2 Corinthians 7:10; Ephesians 2:8–9; Romans 8:1; 2 Corinthians 5:17"
       ],
-      "memoryVerse": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
+      "memoryVerse": "2 Corinthians 5:17",
+      "introduction": "Repentance turns a person from sin, faith turns a person toward Christ, and identity in Christ changes how a believer sees themselves and lives.",
       "lessons": [
         {
-          "title": "Awaiting church-approved content.",
-          "content": "Awaiting church-approved content."
+          "title": "Repentance and faith",
+          "content": "Repentance is a change of mind, heart, and direction, not merely feeling sorry. Saving faith trusts Christ personally and produces obedience. Baptism publicly identifies a believer with Christ but does not earn salvation."
+        },
+        {
+          "title": "Identity in Christ",
+          "content": "Those in Christ are new creations, forgiven, adopted, and no longer defined by condemnation or past failure. Identity transformation is foundational for growth."
+        },
+        {
+          "title": "Live from a new identity",
+          "content": "Reject condemning thoughts, speak Scripture-based truth, obey promptly, and seek accountability. Authority flows from position in Christ, not from emotion or pride."
         }
       ],
       "discussionQuestions": [
-        "Awaiting church-approved content."
+        "What is the difference between regret and repentance?",
+        "Why did Jesus teach people to count the cost of following Him?",
+        "How does identity in Christ affect behavior?"
       ],
       "reviewQuestions": [
-        "Awaiting church-approved content."
+        "How do repentance and faith relate to one another?",
+        "Name two truths about identity in Christ."
       ],
       "assignments": [
-        "Awaiting church-approved content."
+        "Memorize Romans 8:1.",
+        "Write a declaration of who you are in Christ and identify one old label to reject."
       ],
-      "conclusion": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
+      "conclusion": "Repentance changes direction, faith rests in Christ, and a new identity shapes a transformed life.",
+      "contentStatus": "provided"
     },
     {
       "id": "discipleship-005",
       "moduleNumber": 5,
-      "title": "Discipleship Module 05",
-      "description": "Awaiting church-approved content.",
+      "title": "Lesson 5: Assurance of Salvation & The Holy Spirit",
+      "description": "Build assurance on God's promises and understand the Spirit's presence and work in the believer.",
       "scriptureReferences": [
-        "Awaiting church-approved content."
+        "Ephesians 2:8–9; Romans 8:16; Galatians 5:22–23; 1 Corinthians 12"
       ],
-      "memoryVerse": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
+      "memoryVerse": "Romans 8:16",
+      "introduction": "Assurance is not built on fluctuating feelings. It rests on the promises of God, the finished work of Christ, the Spirit's witness, and the evidence of growth.",
       "lessons": [
         {
-          "title": "Awaiting church-approved content.",
-          "content": "Awaiting church-approved content."
+          "title": "Ground assurance in truth",
+          "content": "Salvation is a gift of grace received through faith. Evidence includes a growing direction of obedience, love for God and others, sensitivity to sin, and spiritual growth."
+        },
+        {
+          "title": "The Holy Spirit and the believer",
+          "content": "The Spirit indwells believers, bears witness that they belong to God, forms Christlike fruit, and gives gifts for service and edification. Gifts do not replace character."
+        },
+        {
+          "title": "Walk in the Spirit daily",
+          "content": "Daily dependence includes prayer, Scripture, immediate obedience, fellowship, and responding to conviction. Spiritual growth is more than emotional intensity."
         }
       ],
       "discussionQuestions": [
-        "Awaiting church-approved content."
+        "How can someone know they are genuinely saved?",
+        "What is the difference between spiritual fruit and gifts?",
+        "What does walking in the Spirit look like in daily life?"
       ],
       "reviewQuestions": [
-        "Awaiting church-approved content."
+        "Name the foundations of assurance in Christ.",
+        "How does the Spirit shape a believer's character?"
       ],
       "assignments": [
-        "Awaiting church-approved content."
+        "Memorize Romans 8:16.",
+        "List evidence of spiritual growth and identify one fruit of the Spirit to cultivate."
       ],
-      "conclusion": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
+      "conclusion": "Assurance rests on God's work, and the Spirit forms believers for a life of character, service, and ongoing growth.",
+      "contentStatus": "provided"
     },
     {
       "id": "discipleship-006",
       "moduleNumber": 6,
-      "title": "Discipleship Module 06",
-      "description": "Awaiting church-approved content.",
+      "title": "Lesson 6: The Word of God",
+      "description": "Study Scripture carefully and apply it as the foundation for spiritual formation.",
       "scriptureReferences": [
-        "Awaiting church-approved content."
+        "2 Timothy 3:16–17; Joshua 1:8; 2 Timothy 2:15; James 1:22–25"
       ],
-      "memoryVerse": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
+      "memoryVerse": "Joshua 1:8",
+      "introduction": "Spiritual growth depends on Scripture. Prayer connects us relationally with God, while the Word anchors believers in truth and equips them for good work.",
       "lessons": [
         {
-          "title": "Awaiting church-approved content.",
-          "content": "Awaiting church-approved content."
+          "title": "Inspiration and authority",
+          "content": "Scripture is God-breathed and useful for teaching, correction, and training in righteousness. Handle the text carefully and respect context."
+        },
+        {
+          "title": "Meditation and study",
+          "content": "Biblical meditation fills the mind with truth through reading, reflection, repetition, personalization, and prayer. Inductive study observes, interprets, and applies the passage."
+        },
+        {
+          "title": "Apply and remember the Word",
+          "content": "Study should lead to obedience. Ask what the text teaches about God, what it reveals about people, and what command, promise, or warning calls for response. Memorization helps internalize truth."
         }
       ],
       "discussionQuestions": [
-        "Awaiting church-approved content."
+        "Why is Scripture a final authority for Christian belief and practice?",
+        "What is the difference between reading and meditating?",
+        "Why is application essential to Bible study?"
       ],
       "reviewQuestions": [
-        "Awaiting church-approved content."
+        "Name the three steps of inductive Bible study.",
+        "What questions help you apply a passage?"
       ],
       "assignments": [
-        "Awaiting church-approved content."
+        "Memorize 2 Timothy 3:16–17.",
+        "Use the observation, interpretation, and application method to study one chapter this week."
       ],
-      "conclusion": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
+      "conclusion": "Engage Scripture consistently, interpret it responsibly, and let understanding lead to practical obedience.",
+      "contentStatus": "provided"
     }
   ]
 }
