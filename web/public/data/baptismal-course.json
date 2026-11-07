@@ -5,116 +5,162 @@
     {
       "id": "baptism-001",
       "moduleNumber": 1,
-      "title": "Sample Module: Preparing for Baptism",
-      "description": "Demonstration module: discuss baptismal preparation with church leaders and use the congregation’s approved teaching.",
+      "title": "Lesson 1: The Meaning of Salvation",
+      "description": "Understand sin, God's redemptive plan, and salvation by grace through the finished work of Christ.",
       "scriptureReferences": [
-        "Matthew 28:19–20; Romans 6:3–4; Acts 8:36–38"
+        "Genesis 3; Romans 3:23; Ephesians 2:8–9; Isaiah 53:5–6; 1 Corinthians 15:3–4"
       ],
-      "memoryVerse": "Romans 6:4",
-      "introduction": "This sample module presents questions for a guided conversation. It is not a substitute for the church’s baptismal teaching or pastoral guidance.",
+      "memoryVerse": "Ephesians 2:8–9",
+      "introduction": "Salvation means rescue, deliverance, and restoration from sin through Jesus Christ. It is not merely joining a church, moral reform, or a ritual.",
       "lessons": [
         {
-          "title": "Questions to discuss",
-          "content": "What does baptism mean in your congregation? What practical arrangements, consent and support are needed? Which church leader can answer questions?"
+          "title": "Sin and its consequences",
+          "content": "Sin is disobedience, rebellion, and independence from God. It separates people from God, corrupts human life, and brings judgment. Salvation begins by acknowledging our need for God's mercy."
+        },
+        {
+          "title": "God's redemptive plan in Christ",
+          "content": "God's plan was not an afterthought. The Old Testament points toward a Redeemer. Jesus is fully God and fully human, lived without sin, died as a substitute, and rose again. His work is complete."
+        },
+        {
+          "title": "Grace, faith, and transformed life",
+          "content": "Salvation is received by grace through faith, not earned by works. Good works follow salvation as its fruit. Ask candidates to explain the Gospel and their personal response to Christ."
         }
       ],
       "discussionQuestions": [
-        "What questions would you like to ask before baptism?",
-        "How can the congregation support a person before and after the service?"
+        "Why is salvation more than joining a church?",
+        "How does understanding sin deepen gratitude for grace?",
+        "Why must salvation be by grace and not works?"
       ],
       "reviewQuestions": [
-        "Name one question you want to discuss with a church leader."
+        "What is sin and what are its consequences?",
+        "How is salvation received?"
       ],
       "assignments": [
-        "Awaiting church-approved content."
+        "Read Ephesians 2:8–10 and summarize the relationship between grace, faith, and good works.",
+        "Prepare a brief personal testimony of your response to Christ."
       ],
-      "conclusion": "Invite learners to speak with an authorized church leader about local teaching, scheduling and participation.",
-      "contentStatus": "sample"
+      "conclusion": "Salvation is God's rescue plan accomplished through Jesus Christ, received by grace through faith, and evidenced by a transformed life.",
+      "contentStatus": "provided"
     },
     {
       "id": "baptism-002",
       "moduleNumber": 2,
-      "title": "Sample Module: A Community of Support",
-      "description": "A discussion guide about learning and belonging within a church community.",
+      "title": "Lesson 2: Repentance",
+      "description": "Understand repentance as an essential Gospel response: a Spirit-produced change of heart and a turn toward God.",
       "scriptureReferences": [
-        "Acts 2:42–47; Galatians 6:2"
+        "Mark 1:14–15; Luke 24:47; Acts 2:38; Acts 17:30; 2 Corinthians 7:9–10; Acts 26:20"
       ],
-      "memoryVerse": "Galatians 6:2",
-      "introduction": "Use this sample as a conversation starter and supplement it with approved local course materials.",
+      "memoryVerse": "Acts 3:19",
+      "introduction": "Repentance is not an optional emotional response. Jesus and the apostles preached it as a central part of the Gospel call.",
       "lessons": [
         {
-          "title": "Growing together",
-          "content": "Discuss how a community can offer practical care, welcome questions and respect personal boundaries."
+          "title": "The meaning and necessity of repentance",
+          "content": "Metanoia describes a change of mind and heart that turns a person from sin toward God. Repentance is necessary because sin is universal, serious, and contrary to God's holiness."
+        },
+        {
+          "title": "Godly sorrow and true turning",
+          "content": "Worldly sorrow grieves consequences without transformation. Godly sorrow leads to confession, forsaking sin, and a new direction of obedience."
+        },
+        {
+          "title": "The fruit of repentance",
+          "content": "Conviction, confession, turning from sin, and turning to God are followed by visible fruit such as obedience, restitution where possible, and new patterns of righteousness. Repentance prepares the heart for baptism."
         }
       ],
       "discussionQuestions": [
-        "What kinds of support help a person feel connected?",
-        "How can a congregation offer help without pressure?"
+        "What is the difference between regret and repentance?",
+        "Why is repentance necessary for baptismal candidates?",
+        "What fruit might demonstrate a changed direction?"
       ],
       "reviewQuestions": [
-        "Name one trusted person or church contact you could approach with a question."
+        "What does repentance mean in the Gospel?",
+        "Name two fruits of genuine repentance."
       ],
       "assignments": [
-        "Awaiting church-approved content."
+        "Read 2 Corinthians 7:9–10 and write how godly sorrow differs from regret.",
+        "Identify one area where you need to turn toward God and seek support from a trusted leader."
       ],
-      "conclusion": "Agree on one appropriate next conversation with a course leader.",
-      "contentStatus": "sample"
+      "conclusion": "Repentance is a Spirit-produced turning from sin toward God. It is the doorway into Christian life and prepares the heart for baptism.",
+      "contentStatus": "provided"
     },
     {
       "id": "baptism-003",
       "moduleNumber": 3,
-      "title": "Baptismal Module 03",
-      "description": "Awaiting church-approved content.",
+      "title": "Lesson 3: Faith in Jesus Christ",
+      "description": "Understand saving faith as personal trust in the person and finished work of Jesus Christ.",
       "scriptureReferences": [
-        "Awaiting church-approved content."
+        "John 3:16; Ephesians 2:8; Hebrews 11:6; Romans 10:9–10; 1 John 5:11–13"
       ],
-      "memoryVerse": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
+      "memoryVerse": "Romans 10:9–10",
+      "introduction": "If repentance turns from sin, faith turns to Christ. Saving faith is the means by which salvation is received; it is not merely agreement that God exists.",
       "lessons": [
         {
-          "title": "Awaiting church-approved content.",
-          "content": "Awaiting church-approved content."
+          "title": "The nature and object of saving faith",
+          "content": "Saving faith includes knowing the Gospel, agreeing that it is true, and personally trusting Christ. Its object is Jesus, not a church, pastor, religious system, or personal goodness."
+        },
+        {
+          "title": "Confession and lordship",
+          "content": "Romans 10 connects belief in the heart with confession by the mouth. Receiving Jesus as Savior includes acknowledging His authority and responding in obedience."
+        },
+        {
+          "title": "Assurance through Christ",
+          "content": "Assurance rests on God's promise, Christ's finished work, the Spirit's witness, and a transformed life. Works confirm faith; they do not earn salvation."
         }
       ],
       "discussionQuestions": [
-        "Awaiting church-approved content."
+        "What is the difference between intellectual agreement and personal trust?",
+        "Why is Jesus the only object of saving faith?",
+        "How do good works relate to salvation?"
       ],
       "reviewQuestions": [
-        "Awaiting church-approved content."
+        "What are the three dimensions of saving faith?",
+        "What are the foundations of assurance?"
       ],
       "assignments": [
-        "Awaiting church-approved content."
+        "Read Romans 10:9–10 and write a short statement describing your trust in Christ.",
+        "Prepare to share why you are choosing baptism as a public confession of faith."
       ],
-      "conclusion": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
+      "conclusion": "Saving faith is wholehearted trust in the crucified and risen Christ that leads to surrender, transformation, and confident assurance.",
+      "contentStatus": "provided"
     },
     {
       "id": "baptism-004",
       "moduleNumber": 4,
-      "title": "Baptismal Module 04",
-      "description": "Awaiting church-approved content.",
+      "title": "Lesson 4: The New Birth (Regeneration)",
+      "description": "Understand why regeneration is necessary and what it means to be born again.",
       "scriptureReferences": [
-        "Awaiting church-approved content."
+        "John 3:1–10; Ephesians 2:1; 2 Corinthians 5:17; Ezekiel 36:26–27; Titus 3:5"
       ],
-      "memoryVerse": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
+      "memoryVerse": "2 Corinthians 5:17",
+      "introduction": "Humanity's problem is not only behavior but spiritual death. Jesus told Nicodemus that a person must be born again to see the kingdom of God.",
       "lessons": [
         {
-          "title": "Awaiting church-approved content.",
-          "content": "Awaiting church-approved content."
+          "title": "The necessity and meaning of new birth",
+          "content": "Regeneration is a supernatural act of God that gives spiritual life to a spiritually dead person. It is not church membership, moral improvement, water baptism, or an emotional experience."
+        },
+        {
+          "title": "The new nature and ongoing growth",
+          "content": "The new birth creates a new heart and a capacity for obedience. Believers still experience conflict between flesh and Spirit, but new life produces a changed relationship with sin and a desire for righteousness."
+        },
+        {
+          "title": "Evidence and baptism",
+          "content": "Love for God, desire for Scripture, growth, and perseverance are signs of new life. The Spirit regenerates; water baptism testifies outwardly to the inward work of God."
         }
       ],
       "discussionQuestions": [
-        "Awaiting church-approved content."
+        "Why is religion or morality not enough to replace regeneration?",
+        "What evidence of new life can a believer look for?",
+        "How does water baptism relate to the new birth?"
       ],
       "reviewQuestions": [
-        "Awaiting church-approved content."
+        "Define regeneration.",
+        "Name two signs of new spiritual life."
       ],
       "assignments": [
-        "Awaiting church-approved content."
+        "Read John 3:1–10 and summarize what Jesus teaches about new birth.",
+        "Write down one way your desires or conduct have changed since trusting Christ."
       ],
-      "conclusion": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
+      "conclusion": "The new birth is spiritual resurrection, not cosmetic change. Baptism declares the new life God has already begun.",
+      "contentStatus": "provided"
     }
   ]
 }
