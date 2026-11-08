@@ -37,8 +37,11 @@ export function validateLibraryData(
     : capacity === 52 ? candidate.totalWeeks
       : undefined;
   const capacityDeclared = capacity === 52 || expectedId.includes("devotionals");
-  if (capacity !== undefined && (collection.length !== capacity || (capacityDeclared && declaredCapacity !== capacity))) {
-    throw new Error(`${expectedName} does not contain its required record capacity. Please contact the app administrator.`);
+  if (capacityDeclared && declaredCapacity !== capacity) {
+    throw new Error(`${expectedName} has inconsistent calendar capacity metadata. Please contact the app administrator.`);
+  }
+  if (expectedId === "reports-forms" && collection.length !== capacity) {
+    throw new Error(`${expectedName} does not contain all required form templates. Please contact the app administrator.`);
   }
 
   const requiredKeys: Partial<Record<LibraryId, string[]>> = {

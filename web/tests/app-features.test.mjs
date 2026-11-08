@@ -35,6 +35,30 @@ test("programme weeks follow the configured start date and week boundary", async
   assert.equal(programmeWeek(new Date(2026, 11, 31), "2026-01-04", 0), 52);
 });
 
+test("scheduled content requires an exact day or week match", async () => {
+  const { getScheduledContent } = await loadTypeScriptModule("../src/lib/content-selection.ts");
+  const items = [{ id: "current", day: 312, week: 45 }, { id: "later", day: 320, week: 46 }];
+  assert.equal(getScheduledContent(items, "day", 312).id, "current");
+  assert.equal(getScheduledContent(items, "week", 45).id, "current");
+  assert.equal(getScheduledContent(items, "day", 313), undefined);
+  assert.equal(getScheduledContent(items, "week", 47), undefined);
+});
+
+test("shared content is sectioned and ends with the Play Store link", async () => {
+  const { appendPlayStoreLink, formatContentShare, PLAY_STORE_URL } = await loadTypeScriptModule("../src/lib/share-format.ts");
+  const text = formatContentShare("Bible Study", {
+    id: "bs-045", week: 45, title: "A Faithful Witness", contentStatus: "provided",
+    scripture: "Matthew 5:13-16", studyOutline: [{ heading: "Read", explanation: "Serve with integrity.", questions: ["Where can you help?"] }],
+  });
+  const shared = appendPlayStoreLink(text);
+  assert.ok(shared.includes("Bible Study\n\nWeek 45 of 52\n\nA Faithful Witness"));
+  assert.ok(shared.includes("Scripture:\nMatthew 5:13-16"));
+  assert.ok(shared.includes("Study Outline:\n- Heading: Read\nExplanation: Serve with integrity."));
+  assert.ok(shared.endsWith(PLAY_STORE_URL));
+  assert.equal(appendPlayStoreLink(shared), shared);
+  assert.ok(!shared.includes("contentStatus"));
+});
+
 test("library validator rejects mismatched or malformed records", async () => {
   const { validateLibraryData } = await loadTypeScriptModule("../src/lib/content-validator.ts");
   const lesson = {
@@ -43,9 +67,10 @@ test("library validator rejects mismatched or malformed records", async () => {
   };
   const valid = { libraryId: "sunday-school", libraryName: "Sunday School", totalWeeks: 52, lessons: Array.from({ length: 52 }, (_, index) => ({ ...lesson, id: `ss-${index + 1}` })) };
   assert.equal(validateLibraryData(valid, "sunday-school", "Sunday School", "lessons"), valid);
+  const sparse = { ...valid, lessons: [{ ...lesson, week: 45 }] };
+  assert.equal(validateLibraryData(sparse, "sunday-school", "Sunday School", "lessons"), sparse);
   assert.throws(() => validateLibraryData(valid, "bible-study", "Bible Study", "studies"));
   assert.throws(() => validateLibraryData({ ...valid, lessons: [{ id: "ss-001", title: "Only a title" }] }, "sunday-school", "Sunday School", "lessons"));
-  assert.throws(() => validateLibraryData({ ...valid, lessons: valid.lessons.slice(0, 1) }, "sunday-school", "Sunday School", "lessons"));
 });
 
 test("reports library validates all 17 complete form templates", async () => {

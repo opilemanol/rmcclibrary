@@ -10,7 +10,7 @@ RMCC Church Library is an offline-first web application packaged by the existing
 
 ## Content status
 
-The JSON files contain the required 52-week and 365-day record capacities and 17 weekly, monthly and as-needed form templates. The first entry in each teaching/course library is original demonstration content for testing; it is marked `contentStatus: "sample"` in the app. Remaining entries are marked as placeholders. Replace all demonstration and placeholder entries with church-approved content before production. Official branding and donation details were not supplied, and no church banking details have been invented.
+The bundled libraries include available, substantive entries and 17 weekly, monthly, event-based and as-needed form templates. Demonstration and placeholder records are excluded; day- and week-based libraries are intentionally sparse, and the app reports when a selected date has no entry. Review all teaching material for church approval before production. Official donation details were not supplied, and no church banking details have been invented.
 
 To update content, edit the corresponding JSON in `web/public/data/`. Keep each library's `libraryId`, `libraryName`, collection name, record IDs and required fields valid. The app validates library metadata and records at load time; run the tests after making updates.
 

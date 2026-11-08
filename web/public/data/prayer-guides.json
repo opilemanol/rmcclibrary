@@ -4,698 +4,6 @@
   "totalWeeks": 52,
   "prayerGuides": [
     {
-      "id": "pg-001",
-      "week": 1,
-      "title": "Sample Prayer Guide: Wisdom for the Week",
-      "scripture": "James 1:5; Proverbs 3:5–6",
-      "introduction": "Use these optional prompts for personal or group prayer. Pause, adapt the words to your situation and respect different needs.",
-      "prayerPoints": [
-        {
-          "title": "Wisdom in decisions",
-          "description": "Pray for clarity, patience and good counsel when facing important choices.",
-          "scripture": "James 1:5"
-        },
-        {
-          "title": "Care for neighbors",
-          "description": "Remember people facing illness, loneliness, financial stress or transition. Ask what practical support is appropriate.",
-          "scripture": "Galatians 6:2"
-        }
-      ],
-      "declarations": [
-        "We will seek wisdom and listen before acting.",
-        "We will offer help with respect and humility."
-      ],
-      "thanksgiving": "Give thanks for people who offer wise counsel and dependable care.",
-      "conclusion": "Close with a quiet moment and choose one practical follow-up action.",
-      "contentStatus": "sample"
-    },
-    {
-      "id": "pg-002",
-      "week": 2,
-      "title": "Sample Prayer Guide: Peace in Our Community",
-      "scripture": "Matthew 5:9; Romans 12:18",
-      "introduction": "A demonstration guide for praying about peaceful relationships, safety and just treatment in the community.",
-      "prayerPoints": [
-        {
-          "title": "Listen across differences",
-          "description": "Pray for courage to listen carefully and speak honestly without demeaning others.",
-          "scripture": "Romans 12:18"
-        },
-        {
-          "title": "Support peacemakers",
-          "description": "Remember people doing patient work to resolve conflict and protect vulnerable neighbors.",
-          "scripture": "Matthew 5:9"
-        }
-      ],
-      "declarations": [
-        "We will pursue peace without ignoring harm.",
-        "We will seek support from trusted people when conflict is unsafe."
-      ],
-      "thanksgiving": "Give thanks for those who choose patience, fairness and repair.",
-      "conclusion": "Consider one safe step toward understanding or reconciliation.",
-      "contentStatus": "sample"
-    },
-    {
-      "id": "pg-003",
-      "week": 3,
-      "title": "Prayer Guide Week 03",
-      "scripture": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
-      "prayerPoints": [
-        {
-          "title": "Awaiting church-approved content.",
-          "description": "Awaiting church-approved content.",
-          "scripture": "Awaiting church-approved content."
-        }
-      ],
-      "declarations": [
-        "Awaiting church-approved content."
-      ],
-      "thanksgiving": "Awaiting church-approved content.",
-      "conclusion": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
-    },
-    {
-      "id": "pg-004",
-      "week": 4,
-      "title": "Prayer Guide Week 04",
-      "scripture": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
-      "prayerPoints": [
-        {
-          "title": "Awaiting church-approved content.",
-          "description": "Awaiting church-approved content.",
-          "scripture": "Awaiting church-approved content."
-        }
-      ],
-      "declarations": [
-        "Awaiting church-approved content."
-      ],
-      "thanksgiving": "Awaiting church-approved content.",
-      "conclusion": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
-    },
-    {
-      "id": "pg-005",
-      "week": 5,
-      "title": "Prayer Guide Week 05",
-      "scripture": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
-      "prayerPoints": [
-        {
-          "title": "Awaiting church-approved content.",
-          "description": "Awaiting church-approved content.",
-          "scripture": "Awaiting church-approved content."
-        }
-      ],
-      "declarations": [
-        "Awaiting church-approved content."
-      ],
-      "thanksgiving": "Awaiting church-approved content.",
-      "conclusion": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
-    },
-    {
-      "id": "pg-006",
-      "week": 6,
-      "title": "Prayer Guide Week 06",
-      "scripture": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
-      "prayerPoints": [
-        {
-          "title": "Awaiting church-approved content.",
-          "description": "Awaiting church-approved content.",
-          "scripture": "Awaiting church-approved content."
-        }
-      ],
-      "declarations": [
-        "Awaiting church-approved content."
-      ],
-      "thanksgiving": "Awaiting church-approved content.",
-      "conclusion": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
-    },
-    {
-      "id": "pg-007",
-      "week": 7,
-      "title": "Prayer Guide Week 07",
-      "scripture": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
-      "prayerPoints": [
-        {
-          "title": "Awaiting church-approved content.",
-          "description": "Awaiting church-approved content.",
-          "scripture": "Awaiting church-approved content."
-        }
-      ],
-      "declarations": [
-        "Awaiting church-approved content."
-      ],
-      "thanksgiving": "Awaiting church-approved content.",
-      "conclusion": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
-    },
-    {
-      "id": "pg-008",
-      "week": 8,
-      "title": "Prayer Guide Week 08",
-      "scripture": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
-      "prayerPoints": [
-        {
-          "title": "Awaiting church-approved content.",
-          "description": "Awaiting church-approved content.",
-          "scripture": "Awaiting church-approved content."
-        }
-      ],
-      "declarations": [
-        "Awaiting church-approved content."
-      ],
-      "thanksgiving": "Awaiting church-approved content.",
-      "conclusion": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
-    },
-    {
-      "id": "pg-009",
-      "week": 9,
-      "title": "Prayer Guide Week 09",
-      "scripture": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
-      "prayerPoints": [
-        {
-          "title": "Awaiting church-approved content.",
-          "description": "Awaiting church-approved content.",
-          "scripture": "Awaiting church-approved content."
-        }
-      ],
-      "declarations": [
-        "Awaiting church-approved content."
-      ],
-      "thanksgiving": "Awaiting church-approved content.",
-      "conclusion": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
-    },
-    {
-      "id": "pg-010",
-      "week": 10,
-      "title": "Prayer Guide Week 10",
-      "scripture": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
-      "prayerPoints": [
-        {
-          "title": "Awaiting church-approved content.",
-          "description": "Awaiting church-approved content.",
-          "scripture": "Awaiting church-approved content."
-        }
-      ],
-      "declarations": [
-        "Awaiting church-approved content."
-      ],
-      "thanksgiving": "Awaiting church-approved content.",
-      "conclusion": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
-    },
-    {
-      "id": "pg-011",
-      "week": 11,
-      "title": "Prayer Guide Week 11",
-      "scripture": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
-      "prayerPoints": [
-        {
-          "title": "Awaiting church-approved content.",
-          "description": "Awaiting church-approved content.",
-          "scripture": "Awaiting church-approved content."
-        }
-      ],
-      "declarations": [
-        "Awaiting church-approved content."
-      ],
-      "thanksgiving": "Awaiting church-approved content.",
-      "conclusion": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
-    },
-    {
-      "id": "pg-012",
-      "week": 12,
-      "title": "Prayer Guide Week 12",
-      "scripture": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
-      "prayerPoints": [
-        {
-          "title": "Awaiting church-approved content.",
-          "description": "Awaiting church-approved content.",
-          "scripture": "Awaiting church-approved content."
-        }
-      ],
-      "declarations": [
-        "Awaiting church-approved content."
-      ],
-      "thanksgiving": "Awaiting church-approved content.",
-      "conclusion": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
-    },
-    {
-      "id": "pg-013",
-      "week": 13,
-      "title": "Prayer Guide Week 13",
-      "scripture": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
-      "prayerPoints": [
-        {
-          "title": "Awaiting church-approved content.",
-          "description": "Awaiting church-approved content.",
-          "scripture": "Awaiting church-approved content."
-        }
-      ],
-      "declarations": [
-        "Awaiting church-approved content."
-      ],
-      "thanksgiving": "Awaiting church-approved content.",
-      "conclusion": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
-    },
-    {
-      "id": "pg-014",
-      "week": 14,
-      "title": "Prayer Guide Week 14",
-      "scripture": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
-      "prayerPoints": [
-        {
-          "title": "Awaiting church-approved content.",
-          "description": "Awaiting church-approved content.",
-          "scripture": "Awaiting church-approved content."
-        }
-      ],
-      "declarations": [
-        "Awaiting church-approved content."
-      ],
-      "thanksgiving": "Awaiting church-approved content.",
-      "conclusion": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
-    },
-    {
-      "id": "pg-015",
-      "week": 15,
-      "title": "Prayer Guide Week 15",
-      "scripture": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
-      "prayerPoints": [
-        {
-          "title": "Awaiting church-approved content.",
-          "description": "Awaiting church-approved content.",
-          "scripture": "Awaiting church-approved content."
-        }
-      ],
-      "declarations": [
-        "Awaiting church-approved content."
-      ],
-      "thanksgiving": "Awaiting church-approved content.",
-      "conclusion": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
-    },
-    {
-      "id": "pg-016",
-      "week": 16,
-      "title": "Prayer Guide Week 16",
-      "scripture": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
-      "prayerPoints": [
-        {
-          "title": "Awaiting church-approved content.",
-          "description": "Awaiting church-approved content.",
-          "scripture": "Awaiting church-approved content."
-        }
-      ],
-      "declarations": [
-        "Awaiting church-approved content."
-      ],
-      "thanksgiving": "Awaiting church-approved content.",
-      "conclusion": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
-    },
-    {
-      "id": "pg-017",
-      "week": 17,
-      "title": "Prayer Guide Week 17",
-      "scripture": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
-      "prayerPoints": [
-        {
-          "title": "Awaiting church-approved content.",
-          "description": "Awaiting church-approved content.",
-          "scripture": "Awaiting church-approved content."
-        }
-      ],
-      "declarations": [
-        "Awaiting church-approved content."
-      ],
-      "thanksgiving": "Awaiting church-approved content.",
-      "conclusion": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
-    },
-    {
-      "id": "pg-018",
-      "week": 18,
-      "title": "Prayer Guide Week 18",
-      "scripture": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
-      "prayerPoints": [
-        {
-          "title": "Awaiting church-approved content.",
-          "description": "Awaiting church-approved content.",
-          "scripture": "Awaiting church-approved content."
-        }
-      ],
-      "declarations": [
-        "Awaiting church-approved content."
-      ],
-      "thanksgiving": "Awaiting church-approved content.",
-      "conclusion": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
-    },
-    {
-      "id": "pg-019",
-      "week": 19,
-      "title": "Prayer Guide Week 19",
-      "scripture": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
-      "prayerPoints": [
-        {
-          "title": "Awaiting church-approved content.",
-          "description": "Awaiting church-approved content.",
-          "scripture": "Awaiting church-approved content."
-        }
-      ],
-      "declarations": [
-        "Awaiting church-approved content."
-      ],
-      "thanksgiving": "Awaiting church-approved content.",
-      "conclusion": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
-    },
-    {
-      "id": "pg-020",
-      "week": 20,
-      "title": "Prayer Guide Week 20",
-      "scripture": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
-      "prayerPoints": [
-        {
-          "title": "Awaiting church-approved content.",
-          "description": "Awaiting church-approved content.",
-          "scripture": "Awaiting church-approved content."
-        }
-      ],
-      "declarations": [
-        "Awaiting church-approved content."
-      ],
-      "thanksgiving": "Awaiting church-approved content.",
-      "conclusion": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
-    },
-    {
-      "id": "pg-021",
-      "week": 21,
-      "title": "Prayer Guide Week 21",
-      "scripture": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
-      "prayerPoints": [
-        {
-          "title": "Awaiting church-approved content.",
-          "description": "Awaiting church-approved content.",
-          "scripture": "Awaiting church-approved content."
-        }
-      ],
-      "declarations": [
-        "Awaiting church-approved content."
-      ],
-      "thanksgiving": "Awaiting church-approved content.",
-      "conclusion": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
-    },
-    {
-      "id": "pg-022",
-      "week": 22,
-      "title": "Prayer Guide Week 22",
-      "scripture": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
-      "prayerPoints": [
-        {
-          "title": "Awaiting church-approved content.",
-          "description": "Awaiting church-approved content.",
-          "scripture": "Awaiting church-approved content."
-        }
-      ],
-      "declarations": [
-        "Awaiting church-approved content."
-      ],
-      "thanksgiving": "Awaiting church-approved content.",
-      "conclusion": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
-    },
-    {
-      "id": "pg-023",
-      "week": 23,
-      "title": "Prayer Guide Week 23",
-      "scripture": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
-      "prayerPoints": [
-        {
-          "title": "Awaiting church-approved content.",
-          "description": "Awaiting church-approved content.",
-          "scripture": "Awaiting church-approved content."
-        }
-      ],
-      "declarations": [
-        "Awaiting church-approved content."
-      ],
-      "thanksgiving": "Awaiting church-approved content.",
-      "conclusion": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
-    },
-    {
-      "id": "pg-024",
-      "week": 24,
-      "title": "Prayer Guide Week 24",
-      "scripture": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
-      "prayerPoints": [
-        {
-          "title": "Awaiting church-approved content.",
-          "description": "Awaiting church-approved content.",
-          "scripture": "Awaiting church-approved content."
-        }
-      ],
-      "declarations": [
-        "Awaiting church-approved content."
-      ],
-      "thanksgiving": "Awaiting church-approved content.",
-      "conclusion": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
-    },
-    {
-      "id": "pg-025",
-      "week": 25,
-      "title": "Prayer Guide Week 25",
-      "scripture": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
-      "prayerPoints": [
-        {
-          "title": "Awaiting church-approved content.",
-          "description": "Awaiting church-approved content.",
-          "scripture": "Awaiting church-approved content."
-        }
-      ],
-      "declarations": [
-        "Awaiting church-approved content."
-      ],
-      "thanksgiving": "Awaiting church-approved content.",
-      "conclusion": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
-    },
-    {
-      "id": "pg-026",
-      "week": 26,
-      "title": "Prayer Guide Week 26",
-      "scripture": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
-      "prayerPoints": [
-        {
-          "title": "Awaiting church-approved content.",
-          "description": "Awaiting church-approved content.",
-          "scripture": "Awaiting church-approved content."
-        }
-      ],
-      "declarations": [
-        "Awaiting church-approved content."
-      ],
-      "thanksgiving": "Awaiting church-approved content.",
-      "conclusion": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
-    },
-    {
-      "id": "pg-027",
-      "week": 27,
-      "title": "Prayer Guide Week 27",
-      "scripture": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
-      "prayerPoints": [
-        {
-          "title": "Awaiting church-approved content.",
-          "description": "Awaiting church-approved content.",
-          "scripture": "Awaiting church-approved content."
-        }
-      ],
-      "declarations": [
-        "Awaiting church-approved content."
-      ],
-      "thanksgiving": "Awaiting church-approved content.",
-      "conclusion": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
-    },
-    {
-      "id": "pg-028",
-      "week": 28,
-      "title": "Prayer Guide Week 28",
-      "scripture": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
-      "prayerPoints": [
-        {
-          "title": "Awaiting church-approved content.",
-          "description": "Awaiting church-approved content.",
-          "scripture": "Awaiting church-approved content."
-        }
-      ],
-      "declarations": [
-        "Awaiting church-approved content."
-      ],
-      "thanksgiving": "Awaiting church-approved content.",
-      "conclusion": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
-    },
-    {
-      "id": "pg-029",
-      "week": 29,
-      "title": "Prayer Guide Week 29",
-      "scripture": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
-      "prayerPoints": [
-        {
-          "title": "Awaiting church-approved content.",
-          "description": "Awaiting church-approved content.",
-          "scripture": "Awaiting church-approved content."
-        }
-      ],
-      "declarations": [
-        "Awaiting church-approved content."
-      ],
-      "thanksgiving": "Awaiting church-approved content.",
-      "conclusion": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
-    },
-    {
-      "id": "pg-030",
-      "week": 30,
-      "title": "Prayer Guide Week 30",
-      "scripture": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
-      "prayerPoints": [
-        {
-          "title": "Awaiting church-approved content.",
-          "description": "Awaiting church-approved content.",
-          "scripture": "Awaiting church-approved content."
-        }
-      ],
-      "declarations": [
-        "Awaiting church-approved content."
-      ],
-      "thanksgiving": "Awaiting church-approved content.",
-      "conclusion": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
-    },
-    {
-      "id": "pg-031",
-      "week": 31,
-      "title": "Prayer Guide Week 31",
-      "scripture": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
-      "prayerPoints": [
-        {
-          "title": "Awaiting church-approved content.",
-          "description": "Awaiting church-approved content.",
-          "scripture": "Awaiting church-approved content."
-        }
-      ],
-      "declarations": [
-        "Awaiting church-approved content."
-      ],
-      "thanksgiving": "Awaiting church-approved content.",
-      "conclusion": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
-    },
-    {
-      "id": "pg-032",
-      "week": 32,
-      "title": "Prayer Guide Week 32",
-      "scripture": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
-      "prayerPoints": [
-        {
-          "title": "Awaiting church-approved content.",
-          "description": "Awaiting church-approved content.",
-          "scripture": "Awaiting church-approved content."
-        }
-      ],
-      "declarations": [
-        "Awaiting church-approved content."
-      ],
-      "thanksgiving": "Awaiting church-approved content.",
-      "conclusion": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
-    },
-    {
-      "id": "pg-033",
-      "week": 33,
-      "title": "Prayer Guide Week 33",
-      "scripture": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
-      "prayerPoints": [
-        {
-          "title": "Awaiting church-approved content.",
-          "description": "Awaiting church-approved content.",
-          "scripture": "Awaiting church-approved content."
-        }
-      ],
-      "declarations": [
-        "Awaiting church-approved content."
-      ],
-      "thanksgiving": "Awaiting church-approved content.",
-      "conclusion": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
-    },
-    {
-      "id": "pg-034",
-      "week": 34,
-      "title": "Prayer Guide Week 34",
-      "scripture": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
-      "prayerPoints": [
-        {
-          "title": "Awaiting church-approved content.",
-          "description": "Awaiting church-approved content.",
-          "scripture": "Awaiting church-approved content."
-        }
-      ],
-      "declarations": [
-        "Awaiting church-approved content."
-      ],
-      "thanksgiving": "Awaiting church-approved content.",
-      "conclusion": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
-    },
-    {
       "id": "pg-035",
       "week": 35,
       "title": "Supernatural Promotion",
@@ -733,8 +41,7 @@
         "My gifts and work will serve others and bring glory to God."
       ],
       "thanksgiving": "Father, thank You for every opportunity, gift, and person You have placed in my path.",
-      "conclusion": "Pray for wisdom, excellence, humility, and faithfulness in the next opportunity entrusted to you.",
-      "contentStatus": "provided"
+      "conclusion": "Pray for wisdom, excellence, humility, and faithfulness in the next opportunity entrusted to you."
     },
     {
       "id": "pg-036",
@@ -774,8 +81,7 @@
         "I will use my influence and resources to serve God's kingdom and others."
       ],
       "thanksgiving": "Father, thank You for every territory and inheritance You have prepared for me.",
-      "conclusion": "Name one next step into a new responsibility, pray for wisdom, and make a practical plan to take it.",
-      "contentStatus": "provided"
+      "conclusion": "Name one next step into a new responsibility, pray for wisdom, and make a practical plan to take it."
     },
     {
       "id": "pg-037",
@@ -815,8 +121,7 @@
         "I will use spiritual authority with wisdom, humility, and care for others."
       ],
       "thanksgiving": "Father, thank You for the authority and responsibility You have given through Christ.",
-      "conclusion": "Choose one area of self-mastery or service where you can take a practical step toward responsible influence.",
-      "contentStatus": "provided"
+      "conclusion": "Choose one area of self-mastery or service where you can take a practical step toward responsible influence."
     },
     {
       "id": "pg-038",
@@ -856,8 +161,7 @@
         "I will serve others with the strength and grace God provides."
       ],
       "thanksgiving": "Father, thank You for the privilege of dwelling in Your presence.",
-      "conclusion": "Set aside a quiet time for prayer and Scripture, then identify one act of service that follows from what you have reflected on.",
-      "contentStatus": "provided"
+      "conclusion": "Set aside a quiet time for prayer and Scripture, then identify one act of service that follows from what you have reflected on."
     },
     {
       "id": "pg-039",
@@ -897,8 +201,7 @@
         "May renewal begin in me and extend through my home and community."
       ],
       "thanksgiving": "Father, thank You for every work of Your Spirit in my life, family, and ministry.",
-      "conclusion": "Choose one spiritual practice to renew and one person or community for whom you will pray and serve this week.",
-      "contentStatus": "provided"
+      "conclusion": "Choose one spiritual practice to renew and one person or community for whom you will pray and serve this week."
     },
     {
       "id": "pg-040",
@@ -938,8 +241,7 @@
         "I will use insight to solve problems and serve with excellence."
       ],
       "thanksgiving": "Father, thank You because wisdom and understanding belong to You.",
-      "conclusion": "Bring one decision to God in prayer, seek wise counsel, and identify a practical next step.",
-      "contentStatus": "provided"
+      "conclusion": "Bring one decision to God in prayer, seek wise counsel, and identify a practical next step."
     },
     {
       "id": "pg-041",
@@ -979,8 +281,7 @@
         "I will respond to wise direction with humility and obedience."
       ],
       "thanksgiving": "Father, thank You that You speak to Your children and guide them in the way they should go.",
-      "conclusion": "Set aside quiet time with Scripture, note the direction you are seeking, and discuss important decisions with trusted wise counsel.",
-      "contentStatus": "provided"
+      "conclusion": "Set aside quiet time with Scripture, note the direction you are seeking, and discuss important decisions with trusted wise counsel."
     },
     {
       "id": "pg-042",
@@ -1020,8 +321,7 @@
         "May my life and witness help others come to know Jesus."
       ],
       "thanksgiving": "Father, thank You for the privilege of partnering with You in the salvation of people.",
-      "conclusion": "Pray for one person by name, look for a respectful opportunity to serve them, and be ready to share the hope you have.",
-      "contentStatus": "provided"
+      "conclusion": "Pray for one person by name, look for a respectful opportunity to serve them, and be ready to share the hope you have."
     },
     {
       "id": "pg-043",
@@ -1061,8 +361,7 @@
         "May our communities see the love and hope of Christ through the Church."
       ],
       "thanksgiving": "Father, thank You for building Your Church and advancing Your kingdom across the nations.",
-      "conclusion": "Choose one practical way to support evangelism, discipleship, or care within your local church this week.",
-      "contentStatus": "provided"
+      "conclusion": "Choose one practical way to support evangelism, discipleship, or care within your local church this week."
     },
     {
       "id": "pg-044",
@@ -1102,8 +401,7 @@
         "May faithful leaders raise and equip others for generations to come."
       ],
       "thanksgiving": "Father, thank You for raising men and women who advance Your kingdom in every generation.",
-      "conclusion": "Identify one emerging leader to encourage or mentor and one responsibility you can delegate with clear support.",
-      "contentStatus": "provided"
+      "conclusion": "Identify one emerging leader to encourage or mentor and one responsibility you can delegate with clear support."
     },
     {
       "id": "pg-045",
@@ -1143,8 +441,7 @@
         "Christ will be honored as believers serve with courage, wisdom, and love."
       ],
       "thanksgiving": "Father, thank You for Your promise to give the nations as an inheritance to Your Son.",
-      "conclusion": "Pray for one nation or community and identify a practical way to support mission work or cross-cultural friendship.",
-      "contentStatus": "provided"
+      "conclusion": "Pray for one nation or community and identify a practical way to support mission work or cross-cultural friendship."
     },
     {
       "id": "pg-046",
@@ -1184,8 +481,7 @@
         "I will remain faithful and leave a godly legacy for future generations."
       ],
       "thanksgiving": "Father, thank You for bringing me this far by Your grace and mercy.",
-      "conclusion": "Name an unfinished assignment, choose a realistic next step, and ask someone trustworthy to encourage your follow-through.",
-      "contentStatus": "provided"
+      "conclusion": "Name an unfinished assignment, choose a realistic next step, and ask someone trustworthy to encourage your follow-through."
     },
     {
       "id": "pg-047",
@@ -1225,8 +521,7 @@
         "I will enter the next season with gratitude and hope."
       ],
       "thanksgiving": "Lord, I thank You for Your goodness, mercy, and faithfulness throughout my life.",
-      "conclusion": "Name one specific answered prayer, one person who supported you, and one way you have grown this year.",
-      "contentStatus": "provided"
+      "conclusion": "Name one specific answered prayer, one person who supported you, and one way you have grown this year."
     },
     {
       "id": "pg-048",
@@ -1266,8 +561,7 @@
         "I will embrace new opportunities while remaining attentive to God's guidance."
       ],
       "thanksgiving": "Father, thank You for bringing me to the threshold of a new season.",
-      "conclusion": "Write down one thing you are releasing and one new responsibility you are ready to take up with wisdom.",
-      "contentStatus": "provided"
+      "conclusion": "Write down one thing you are releasing and one new responsibility you are ready to take up with wisdom."
     },
     {
       "id": "pg-049",
@@ -1307,8 +601,7 @@
         "I will seek to finish my assignments with excellence and joy."
       ],
       "thanksgiving": "Father, thank You that You hold my future and my times are in Your hands.",
-      "conclusion": "Choose one declaration grounded in Scripture and pair it with a practical step toward a goal you have committed to God.",
-      "contentStatus": "provided"
+      "conclusion": "Choose one declaration grounded in Scripture and pair it with a practical step toward a goal you have committed to God."
     },
     {
       "id": "pg-050",
@@ -1348,48 +641,7 @@
         "We will enter the next season with gratitude and hope."
       ],
       "thanksgiving": "Father, thank You for Your faithfulness from the beginning of the year until now.",
-      "conclusion": "Name three testimonies from the year and share one with someone who would be encouraged by it.",
-      "contentStatus": "provided"
-    },
-    {
-      "id": "pg-051",
-      "week": 51,
-      "title": "Prayer Guide Week 51",
-      "scripture": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
-      "prayerPoints": [
-        {
-          "title": "Awaiting church-approved content.",
-          "description": "Awaiting church-approved content.",
-          "scripture": "Awaiting church-approved content."
-        }
-      ],
-      "declarations": [
-        "Awaiting church-approved content."
-      ],
-      "thanksgiving": "Awaiting church-approved content.",
-      "conclusion": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
-    },
-    {
-      "id": "pg-052",
-      "week": 52,
-      "title": "Prayer Guide Week 52",
-      "scripture": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
-      "prayerPoints": [
-        {
-          "title": "Awaiting church-approved content.",
-          "description": "Awaiting church-approved content.",
-          "scripture": "Awaiting church-approved content."
-        }
-      ],
-      "declarations": [
-        "Awaiting church-approved content."
-      ],
-      "thanksgiving": "Awaiting church-approved content.",
-      "conclusion": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
+      "conclusion": "Name three testimonies from the year and share one with someone who would be encouraged by it."
     }
   ]
 }

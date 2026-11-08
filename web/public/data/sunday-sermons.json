@@ -4,826 +4,6 @@
   "totalWeeks": 52,
   "sermons": [
     {
-      "id": "sermon-001",
-      "week": 1,
-      "title": "Sample Sermon: Hope That Endures",
-      "theme": "Steadfast hope in difficult seasons",
-      "preacher": "Sample outline — preacher to be supplied",
-      "scripture": "Romans 5:1–5; Psalm 42",
-      "keyVerse": "Romans 5:5",
-      "introduction": "This sample outline offers a structure for a sermon on hope without claiming to be an official church message.",
-      "mainPoints": [
-        {
-          "heading": "Hope can coexist with honest grief",
-          "content": "The Psalms make room for lament and trust. Honest prayer does not require hiding pain.",
-          "scriptureReferences": [
-            "Psalm 42"
-          ]
-        },
-        {
-          "heading": "Endurance grows through support and practice",
-          "content": "Hardship is not good in itself, but people can develop endurance and compassion while facing it.",
-          "scriptureReferences": [
-            "Romans 5:3–4"
-          ]
-        },
-        {
-          "heading": "Offer hope through presence",
-          "content": "Practical care, listening and appropriate help can make hope tangible to a neighbor.",
-          "scriptureReferences": [
-            "Romans 12:15"
-          ]
-        }
-      ],
-      "illustration": "Invite the congregation to recall a time when another person listened without rushing to fix everything.",
-      "practicalApplication": "Contact someone who may feel isolated and ask what kind of support would be helpful.",
-      "conclusion": "Hope is not denial; it is a reason to keep seeking what is good together.",
-      "prayer": "God of hope, comfort those who grieve and make us attentive companions to one another. Amen.",
-      "contentStatus": "sample"
-    },
-    {
-      "id": "sermon-002",
-      "week": 2,
-      "title": "Sample Sermon: A Neighbor in Need",
-      "theme": "Mercy expressed through practical care",
-      "preacher": "Sample outline — preacher to be supplied",
-      "scripture": "Luke 10:25–37; Micah 6:8",
-      "keyVerse": "Micah 6:8",
-      "introduction": "This demonstration outline invites reflection on compassion that crosses familiar boundaries.",
-      "mainPoints": [
-        {
-          "heading": "Notice the person in front of you",
-          "content": "Compassion begins when we pay attention rather than rushing past another person’s need.",
-          "scriptureReferences": [
-            "Luke 10:33"
-          ]
-        },
-        {
-          "heading": "Offer help that respects dignity",
-          "content": "The Samaritan provides concrete support and makes arrangements for continued care.",
-          "scriptureReferences": [
-            "Luke 10:34–35"
-          ]
-        },
-        {
-          "heading": "Make mercy a shared practice",
-          "content": "Communities can organize dependable care while respecting safety, consent and local expertise.",
-          "scriptureReferences": [
-            "Micah 6:8"
-          ]
-        }
-      ],
-      "illustration": "Describe a community sharing practical tasks to help a neighbor recover from a setback.",
-      "practicalApplication": "Choose one safe, specific way to help in partnership with a person or trusted local service.",
-      "conclusion": "Mercy becomes visible in attention, respect and consistent action.",
-      "prayer": "God, help us recognize our neighbors and respond with wisdom and compassion. Amen.",
-      "contentStatus": "sample"
-    },
-    {
-      "id": "sermon-003",
-      "week": 3,
-      "title": "Sunday Sermon Week 03",
-      "theme": "Awaiting church-approved content.",
-      "preacher": "To be supplied by church",
-      "scripture": "Awaiting church-approved content.",
-      "keyVerse": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
-      "mainPoints": [
-        {
-          "heading": "Awaiting church-approved content.",
-          "content": "Awaiting church-approved content.",
-          "scriptureReferences": [
-            "Awaiting church-approved content."
-          ]
-        }
-      ],
-      "illustration": "Awaiting church-approved content.",
-      "practicalApplication": "Awaiting church-approved content.",
-      "conclusion": "Awaiting church-approved content.",
-      "prayer": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
-    },
-    {
-      "id": "sermon-004",
-      "week": 4,
-      "title": "Sunday Sermon Week 04",
-      "theme": "Awaiting church-approved content.",
-      "preacher": "To be supplied by church",
-      "scripture": "Awaiting church-approved content.",
-      "keyVerse": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
-      "mainPoints": [
-        {
-          "heading": "Awaiting church-approved content.",
-          "content": "Awaiting church-approved content.",
-          "scriptureReferences": [
-            "Awaiting church-approved content."
-          ]
-        }
-      ],
-      "illustration": "Awaiting church-approved content.",
-      "practicalApplication": "Awaiting church-approved content.",
-      "conclusion": "Awaiting church-approved content.",
-      "prayer": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
-    },
-    {
-      "id": "sermon-005",
-      "week": 5,
-      "title": "Sunday Sermon Week 05",
-      "theme": "Awaiting church-approved content.",
-      "preacher": "To be supplied by church",
-      "scripture": "Awaiting church-approved content.",
-      "keyVerse": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
-      "mainPoints": [
-        {
-          "heading": "Awaiting church-approved content.",
-          "content": "Awaiting church-approved content.",
-          "scriptureReferences": [
-            "Awaiting church-approved content."
-          ]
-        }
-      ],
-      "illustration": "Awaiting church-approved content.",
-      "practicalApplication": "Awaiting church-approved content.",
-      "conclusion": "Awaiting church-approved content.",
-      "prayer": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
-    },
-    {
-      "id": "sermon-006",
-      "week": 6,
-      "title": "Sunday Sermon Week 06",
-      "theme": "Awaiting church-approved content.",
-      "preacher": "To be supplied by church",
-      "scripture": "Awaiting church-approved content.",
-      "keyVerse": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
-      "mainPoints": [
-        {
-          "heading": "Awaiting church-approved content.",
-          "content": "Awaiting church-approved content.",
-          "scriptureReferences": [
-            "Awaiting church-approved content."
-          ]
-        }
-      ],
-      "illustration": "Awaiting church-approved content.",
-      "practicalApplication": "Awaiting church-approved content.",
-      "conclusion": "Awaiting church-approved content.",
-      "prayer": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
-    },
-    {
-      "id": "sermon-007",
-      "week": 7,
-      "title": "Sunday Sermon Week 07",
-      "theme": "Awaiting church-approved content.",
-      "preacher": "To be supplied by church",
-      "scripture": "Awaiting church-approved content.",
-      "keyVerse": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
-      "mainPoints": [
-        {
-          "heading": "Awaiting church-approved content.",
-          "content": "Awaiting church-approved content.",
-          "scriptureReferences": [
-            "Awaiting church-approved content."
-          ]
-        }
-      ],
-      "illustration": "Awaiting church-approved content.",
-      "practicalApplication": "Awaiting church-approved content.",
-      "conclusion": "Awaiting church-approved content.",
-      "prayer": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
-    },
-    {
-      "id": "sermon-008",
-      "week": 8,
-      "title": "Sunday Sermon Week 08",
-      "theme": "Awaiting church-approved content.",
-      "preacher": "To be supplied by church",
-      "scripture": "Awaiting church-approved content.",
-      "keyVerse": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
-      "mainPoints": [
-        {
-          "heading": "Awaiting church-approved content.",
-          "content": "Awaiting church-approved content.",
-          "scriptureReferences": [
-            "Awaiting church-approved content."
-          ]
-        }
-      ],
-      "illustration": "Awaiting church-approved content.",
-      "practicalApplication": "Awaiting church-approved content.",
-      "conclusion": "Awaiting church-approved content.",
-      "prayer": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
-    },
-    {
-      "id": "sermon-009",
-      "week": 9,
-      "title": "Sunday Sermon Week 09",
-      "theme": "Awaiting church-approved content.",
-      "preacher": "To be supplied by church",
-      "scripture": "Awaiting church-approved content.",
-      "keyVerse": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
-      "mainPoints": [
-        {
-          "heading": "Awaiting church-approved content.",
-          "content": "Awaiting church-approved content.",
-          "scriptureReferences": [
-            "Awaiting church-approved content."
-          ]
-        }
-      ],
-      "illustration": "Awaiting church-approved content.",
-      "practicalApplication": "Awaiting church-approved content.",
-      "conclusion": "Awaiting church-approved content.",
-      "prayer": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
-    },
-    {
-      "id": "sermon-010",
-      "week": 10,
-      "title": "Sunday Sermon Week 10",
-      "theme": "Awaiting church-approved content.",
-      "preacher": "To be supplied by church",
-      "scripture": "Awaiting church-approved content.",
-      "keyVerse": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
-      "mainPoints": [
-        {
-          "heading": "Awaiting church-approved content.",
-          "content": "Awaiting church-approved content.",
-          "scriptureReferences": [
-            "Awaiting church-approved content."
-          ]
-        }
-      ],
-      "illustration": "Awaiting church-approved content.",
-      "practicalApplication": "Awaiting church-approved content.",
-      "conclusion": "Awaiting church-approved content.",
-      "prayer": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
-    },
-    {
-      "id": "sermon-011",
-      "week": 11,
-      "title": "Sunday Sermon Week 11",
-      "theme": "Awaiting church-approved content.",
-      "preacher": "To be supplied by church",
-      "scripture": "Awaiting church-approved content.",
-      "keyVerse": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
-      "mainPoints": [
-        {
-          "heading": "Awaiting church-approved content.",
-          "content": "Awaiting church-approved content.",
-          "scriptureReferences": [
-            "Awaiting church-approved content."
-          ]
-        }
-      ],
-      "illustration": "Awaiting church-approved content.",
-      "practicalApplication": "Awaiting church-approved content.",
-      "conclusion": "Awaiting church-approved content.",
-      "prayer": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
-    },
-    {
-      "id": "sermon-012",
-      "week": 12,
-      "title": "Sunday Sermon Week 12",
-      "theme": "Awaiting church-approved content.",
-      "preacher": "To be supplied by church",
-      "scripture": "Awaiting church-approved content.",
-      "keyVerse": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
-      "mainPoints": [
-        {
-          "heading": "Awaiting church-approved content.",
-          "content": "Awaiting church-approved content.",
-          "scriptureReferences": [
-            "Awaiting church-approved content."
-          ]
-        }
-      ],
-      "illustration": "Awaiting church-approved content.",
-      "practicalApplication": "Awaiting church-approved content.",
-      "conclusion": "Awaiting church-approved content.",
-      "prayer": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
-    },
-    {
-      "id": "sermon-013",
-      "week": 13,
-      "title": "Sunday Sermon Week 13",
-      "theme": "Awaiting church-approved content.",
-      "preacher": "To be supplied by church",
-      "scripture": "Awaiting church-approved content.",
-      "keyVerse": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
-      "mainPoints": [
-        {
-          "heading": "Awaiting church-approved content.",
-          "content": "Awaiting church-approved content.",
-          "scriptureReferences": [
-            "Awaiting church-approved content."
-          ]
-        }
-      ],
-      "illustration": "Awaiting church-approved content.",
-      "practicalApplication": "Awaiting church-approved content.",
-      "conclusion": "Awaiting church-approved content.",
-      "prayer": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
-    },
-    {
-      "id": "sermon-014",
-      "week": 14,
-      "title": "Sunday Sermon Week 14",
-      "theme": "Awaiting church-approved content.",
-      "preacher": "To be supplied by church",
-      "scripture": "Awaiting church-approved content.",
-      "keyVerse": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
-      "mainPoints": [
-        {
-          "heading": "Awaiting church-approved content.",
-          "content": "Awaiting church-approved content.",
-          "scriptureReferences": [
-            "Awaiting church-approved content."
-          ]
-        }
-      ],
-      "illustration": "Awaiting church-approved content.",
-      "practicalApplication": "Awaiting church-approved content.",
-      "conclusion": "Awaiting church-approved content.",
-      "prayer": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
-    },
-    {
-      "id": "sermon-015",
-      "week": 15,
-      "title": "Sunday Sermon Week 15",
-      "theme": "Awaiting church-approved content.",
-      "preacher": "To be supplied by church",
-      "scripture": "Awaiting church-approved content.",
-      "keyVerse": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
-      "mainPoints": [
-        {
-          "heading": "Awaiting church-approved content.",
-          "content": "Awaiting church-approved content.",
-          "scriptureReferences": [
-            "Awaiting church-approved content."
-          ]
-        }
-      ],
-      "illustration": "Awaiting church-approved content.",
-      "practicalApplication": "Awaiting church-approved content.",
-      "conclusion": "Awaiting church-approved content.",
-      "prayer": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
-    },
-    {
-      "id": "sermon-016",
-      "week": 16,
-      "title": "Sunday Sermon Week 16",
-      "theme": "Awaiting church-approved content.",
-      "preacher": "To be supplied by church",
-      "scripture": "Awaiting church-approved content.",
-      "keyVerse": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
-      "mainPoints": [
-        {
-          "heading": "Awaiting church-approved content.",
-          "content": "Awaiting church-approved content.",
-          "scriptureReferences": [
-            "Awaiting church-approved content."
-          ]
-        }
-      ],
-      "illustration": "Awaiting church-approved content.",
-      "practicalApplication": "Awaiting church-approved content.",
-      "conclusion": "Awaiting church-approved content.",
-      "prayer": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
-    },
-    {
-      "id": "sermon-017",
-      "week": 17,
-      "title": "Sunday Sermon Week 17",
-      "theme": "Awaiting church-approved content.",
-      "preacher": "To be supplied by church",
-      "scripture": "Awaiting church-approved content.",
-      "keyVerse": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
-      "mainPoints": [
-        {
-          "heading": "Awaiting church-approved content.",
-          "content": "Awaiting church-approved content.",
-          "scriptureReferences": [
-            "Awaiting church-approved content."
-          ]
-        }
-      ],
-      "illustration": "Awaiting church-approved content.",
-      "practicalApplication": "Awaiting church-approved content.",
-      "conclusion": "Awaiting church-approved content.",
-      "prayer": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
-    },
-    {
-      "id": "sermon-018",
-      "week": 18,
-      "title": "Sunday Sermon Week 18",
-      "theme": "Awaiting church-approved content.",
-      "preacher": "To be supplied by church",
-      "scripture": "Awaiting church-approved content.",
-      "keyVerse": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
-      "mainPoints": [
-        {
-          "heading": "Awaiting church-approved content.",
-          "content": "Awaiting church-approved content.",
-          "scriptureReferences": [
-            "Awaiting church-approved content."
-          ]
-        }
-      ],
-      "illustration": "Awaiting church-approved content.",
-      "practicalApplication": "Awaiting church-approved content.",
-      "conclusion": "Awaiting church-approved content.",
-      "prayer": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
-    },
-    {
-      "id": "sermon-019",
-      "week": 19,
-      "title": "Sunday Sermon Week 19",
-      "theme": "Awaiting church-approved content.",
-      "preacher": "To be supplied by church",
-      "scripture": "Awaiting church-approved content.",
-      "keyVerse": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
-      "mainPoints": [
-        {
-          "heading": "Awaiting church-approved content.",
-          "content": "Awaiting church-approved content.",
-          "scriptureReferences": [
-            "Awaiting church-approved content."
-          ]
-        }
-      ],
-      "illustration": "Awaiting church-approved content.",
-      "practicalApplication": "Awaiting church-approved content.",
-      "conclusion": "Awaiting church-approved content.",
-      "prayer": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
-    },
-    {
-      "id": "sermon-020",
-      "week": 20,
-      "title": "Sunday Sermon Week 20",
-      "theme": "Awaiting church-approved content.",
-      "preacher": "To be supplied by church",
-      "scripture": "Awaiting church-approved content.",
-      "keyVerse": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
-      "mainPoints": [
-        {
-          "heading": "Awaiting church-approved content.",
-          "content": "Awaiting church-approved content.",
-          "scriptureReferences": [
-            "Awaiting church-approved content."
-          ]
-        }
-      ],
-      "illustration": "Awaiting church-approved content.",
-      "practicalApplication": "Awaiting church-approved content.",
-      "conclusion": "Awaiting church-approved content.",
-      "prayer": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
-    },
-    {
-      "id": "sermon-021",
-      "week": 21,
-      "title": "Sunday Sermon Week 21",
-      "theme": "Awaiting church-approved content.",
-      "preacher": "To be supplied by church",
-      "scripture": "Awaiting church-approved content.",
-      "keyVerse": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
-      "mainPoints": [
-        {
-          "heading": "Awaiting church-approved content.",
-          "content": "Awaiting church-approved content.",
-          "scriptureReferences": [
-            "Awaiting church-approved content."
-          ]
-        }
-      ],
-      "illustration": "Awaiting church-approved content.",
-      "practicalApplication": "Awaiting church-approved content.",
-      "conclusion": "Awaiting church-approved content.",
-      "prayer": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
-    },
-    {
-      "id": "sermon-022",
-      "week": 22,
-      "title": "Sunday Sermon Week 22",
-      "theme": "Awaiting church-approved content.",
-      "preacher": "To be supplied by church",
-      "scripture": "Awaiting church-approved content.",
-      "keyVerse": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
-      "mainPoints": [
-        {
-          "heading": "Awaiting church-approved content.",
-          "content": "Awaiting church-approved content.",
-          "scriptureReferences": [
-            "Awaiting church-approved content."
-          ]
-        }
-      ],
-      "illustration": "Awaiting church-approved content.",
-      "practicalApplication": "Awaiting church-approved content.",
-      "conclusion": "Awaiting church-approved content.",
-      "prayer": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
-    },
-    {
-      "id": "sermon-023",
-      "week": 23,
-      "title": "Sunday Sermon Week 23",
-      "theme": "Awaiting church-approved content.",
-      "preacher": "To be supplied by church",
-      "scripture": "Awaiting church-approved content.",
-      "keyVerse": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
-      "mainPoints": [
-        {
-          "heading": "Awaiting church-approved content.",
-          "content": "Awaiting church-approved content.",
-          "scriptureReferences": [
-            "Awaiting church-approved content."
-          ]
-        }
-      ],
-      "illustration": "Awaiting church-approved content.",
-      "practicalApplication": "Awaiting church-approved content.",
-      "conclusion": "Awaiting church-approved content.",
-      "prayer": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
-    },
-    {
-      "id": "sermon-024",
-      "week": 24,
-      "title": "Sunday Sermon Week 24",
-      "theme": "Awaiting church-approved content.",
-      "preacher": "To be supplied by church",
-      "scripture": "Awaiting church-approved content.",
-      "keyVerse": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
-      "mainPoints": [
-        {
-          "heading": "Awaiting church-approved content.",
-          "content": "Awaiting church-approved content.",
-          "scriptureReferences": [
-            "Awaiting church-approved content."
-          ]
-        }
-      ],
-      "illustration": "Awaiting church-approved content.",
-      "practicalApplication": "Awaiting church-approved content.",
-      "conclusion": "Awaiting church-approved content.",
-      "prayer": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
-    },
-    {
-      "id": "sermon-025",
-      "week": 25,
-      "title": "Sunday Sermon Week 25",
-      "theme": "Awaiting church-approved content.",
-      "preacher": "To be supplied by church",
-      "scripture": "Awaiting church-approved content.",
-      "keyVerse": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
-      "mainPoints": [
-        {
-          "heading": "Awaiting church-approved content.",
-          "content": "Awaiting church-approved content.",
-          "scriptureReferences": [
-            "Awaiting church-approved content."
-          ]
-        }
-      ],
-      "illustration": "Awaiting church-approved content.",
-      "practicalApplication": "Awaiting church-approved content.",
-      "conclusion": "Awaiting church-approved content.",
-      "prayer": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
-    },
-    {
-      "id": "sermon-026",
-      "week": 26,
-      "title": "Sunday Sermon Week 26",
-      "theme": "Awaiting church-approved content.",
-      "preacher": "To be supplied by church",
-      "scripture": "Awaiting church-approved content.",
-      "keyVerse": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
-      "mainPoints": [
-        {
-          "heading": "Awaiting church-approved content.",
-          "content": "Awaiting church-approved content.",
-          "scriptureReferences": [
-            "Awaiting church-approved content."
-          ]
-        }
-      ],
-      "illustration": "Awaiting church-approved content.",
-      "practicalApplication": "Awaiting church-approved content.",
-      "conclusion": "Awaiting church-approved content.",
-      "prayer": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
-    },
-    {
-      "id": "sermon-027",
-      "week": 27,
-      "title": "Sunday Sermon Week 27",
-      "theme": "Awaiting church-approved content.",
-      "preacher": "To be supplied by church",
-      "scripture": "Awaiting church-approved content.",
-      "keyVerse": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
-      "mainPoints": [
-        {
-          "heading": "Awaiting church-approved content.",
-          "content": "Awaiting church-approved content.",
-          "scriptureReferences": [
-            "Awaiting church-approved content."
-          ]
-        }
-      ],
-      "illustration": "Awaiting church-approved content.",
-      "practicalApplication": "Awaiting church-approved content.",
-      "conclusion": "Awaiting church-approved content.",
-      "prayer": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
-    },
-    {
-      "id": "sermon-028",
-      "week": 28,
-      "title": "Sunday Sermon Week 28",
-      "theme": "Awaiting church-approved content.",
-      "preacher": "To be supplied by church",
-      "scripture": "Awaiting church-approved content.",
-      "keyVerse": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
-      "mainPoints": [
-        {
-          "heading": "Awaiting church-approved content.",
-          "content": "Awaiting church-approved content.",
-          "scriptureReferences": [
-            "Awaiting church-approved content."
-          ]
-        }
-      ],
-      "illustration": "Awaiting church-approved content.",
-      "practicalApplication": "Awaiting church-approved content.",
-      "conclusion": "Awaiting church-approved content.",
-      "prayer": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
-    },
-    {
-      "id": "sermon-029",
-      "week": 29,
-      "title": "Sunday Sermon Week 29",
-      "theme": "Awaiting church-approved content.",
-      "preacher": "To be supplied by church",
-      "scripture": "Awaiting church-approved content.",
-      "keyVerse": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
-      "mainPoints": [
-        {
-          "heading": "Awaiting church-approved content.",
-          "content": "Awaiting church-approved content.",
-          "scriptureReferences": [
-            "Awaiting church-approved content."
-          ]
-        }
-      ],
-      "illustration": "Awaiting church-approved content.",
-      "practicalApplication": "Awaiting church-approved content.",
-      "conclusion": "Awaiting church-approved content.",
-      "prayer": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
-    },
-    {
-      "id": "sermon-030",
-      "week": 30,
-      "title": "Sunday Sermon Week 30",
-      "theme": "Awaiting church-approved content.",
-      "preacher": "To be supplied by church",
-      "scripture": "Awaiting church-approved content.",
-      "keyVerse": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
-      "mainPoints": [
-        {
-          "heading": "Awaiting church-approved content.",
-          "content": "Awaiting church-approved content.",
-          "scriptureReferences": [
-            "Awaiting church-approved content."
-          ]
-        }
-      ],
-      "illustration": "Awaiting church-approved content.",
-      "practicalApplication": "Awaiting church-approved content.",
-      "conclusion": "Awaiting church-approved content.",
-      "prayer": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
-    },
-    {
-      "id": "sermon-031",
-      "week": 31,
-      "title": "Sunday Sermon Week 31",
-      "theme": "Awaiting church-approved content.",
-      "preacher": "To be supplied by church",
-      "scripture": "Awaiting church-approved content.",
-      "keyVerse": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
-      "mainPoints": [
-        {
-          "heading": "Awaiting church-approved content.",
-          "content": "Awaiting church-approved content.",
-          "scriptureReferences": [
-            "Awaiting church-approved content."
-          ]
-        }
-      ],
-      "illustration": "Awaiting church-approved content.",
-      "practicalApplication": "Awaiting church-approved content.",
-      "conclusion": "Awaiting church-approved content.",
-      "prayer": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
-    },
-    {
-      "id": "sermon-032",
-      "week": 32,
-      "title": "Sunday Sermon Week 32",
-      "theme": "Awaiting church-approved content.",
-      "preacher": "To be supplied by church",
-      "scripture": "Awaiting church-approved content.",
-      "keyVerse": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
-      "mainPoints": [
-        {
-          "heading": "Awaiting church-approved content.",
-          "content": "Awaiting church-approved content.",
-          "scriptureReferences": [
-            "Awaiting church-approved content."
-          ]
-        }
-      ],
-      "illustration": "Awaiting church-approved content.",
-      "practicalApplication": "Awaiting church-approved content.",
-      "conclusion": "Awaiting church-approved content.",
-      "prayer": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
-    },
-    {
-      "id": "sermon-033",
-      "week": 33,
-      "title": "Sunday Sermon Week 33",
-      "theme": "Awaiting church-approved content.",
-      "preacher": "To be supplied by church",
-      "scripture": "Awaiting church-approved content.",
-      "keyVerse": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
-      "mainPoints": [
-        {
-          "heading": "Awaiting church-approved content.",
-          "content": "Awaiting church-approved content.",
-          "scriptureReferences": [
-            "Awaiting church-approved content."
-          ]
-        }
-      ],
-      "illustration": "Awaiting church-approved content.",
-      "practicalApplication": "Awaiting church-approved content.",
-      "conclusion": "Awaiting church-approved content.",
-      "prayer": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
-    },
-    {
       "id": "sermon-034",
       "week": 34,
       "title": "The Power of Consecration",
@@ -867,8 +47,7 @@
       "illustration": "The sermon describes consecration as clearing the atmosphere of one's life so that devotion and obedience are not crowded out by distraction.",
       "practicalApplication": "Identify one area of life that needs to be intentionally set apart for God, and choose a specific practice that supports that commitment.",
       "conclusion": "God calls people to build a dwelling place for Him through a life of surrender. As you offer every area of life to Him, seek to follow through with obedience.",
-      "prayer": "God, help me surrender every area of my life to You. Teach me to live with holiness, devotion, and wisdom, and let my life serve Your purpose. Amen.",
-      "contentStatus": "provided"
+      "prayer": "God, help me surrender every area of my life to You. Teach me to live with holiness, devotion, and wisdom, and let my life serve Your purpose. Amen."
     },
     {
       "id": "sermon-035",
@@ -906,8 +85,7 @@
       "illustration": "An old mindset can act like outdated equipment: it may not support the responsibilities of a new season until it is renewed.",
       "practicalApplication": "Identify one recurring thought that limits you. Write a Scripture-based truth to replace it and practice meditating on that truth daily.",
       "conclusion": "Transformation begins in the mind before it appears in daily life. Reject limited thinking and cultivate a mindset shaped by God's Word.",
-      "prayer": "Father, renew my mind through Your Word. Help me reject limiting thoughts and live with the courage and character You are forming in me. Amen.",
-      "contentStatus": "provided"
+      "prayer": "Father, renew my mind through Your Word. Help me reject limiting thoughts and live with the courage and character You are forming in me. Amen."
     },
     {
       "id": "sermon-036",
@@ -945,8 +123,7 @@
       "illustration": "The sermon compares the flesh and the Spirit to competing directions that shape daily decisions; what is repeatedly fed tends to become stronger.",
       "practicalApplication": "Identify one impulse or habit that interferes with your values. Ask for support and establish one practical boundary that helps you choose differently.",
       "conclusion": "You are not called to be controlled by impulses. Receive grace to walk in the Spirit and practice self-control in daily life.",
-      "prayer": "Lord, help me walk in the Spirit and grow in self-control. Give me strength to resist harmful impulses and live in alignment with Your purposes. Amen.",
-      "contentStatus": "provided"
+      "prayer": "Lord, help me walk in the Spirit and grow in self-control. Give me strength to resist harmful impulses and live in alignment with Your purposes. Amen."
     },
     {
       "id": "sermon-037",
@@ -984,8 +161,7 @@
       "illustration": "The sermon contrasts a spiritual encounter with the practical evidence that follows when faith shapes daily choices and service.",
       "practicalApplication": "Name one goal that matters, define a measurable next step, and remove one habit that keeps you from completing it.",
       "conclusion": "Align execution with revelation. Let your character, work, and service provide tangible evidence of God's influence in your life.",
-      "prayer": "Father, help my faith produce good fruit in character, work, and service. Give me wisdom to turn what I learn into practical action. Amen.",
-      "contentStatus": "provided"
+      "prayer": "Father, help my faith produce good fruit in character, work, and service. Give me wisdom to turn what I learn into practical action. Amen."
     },
     {
       "id": "sermon-038",
@@ -1023,8 +199,7 @@
       "illustration": "The sermon compares financial resources to raw materials that require diligence and responsible management to become useful value.",
       "practicalApplication": "Track your expenses, identify one value-generating skill to develop, and make a simple plan for saving and giving.",
       "conclusion": "God can empower people to create resources that support their responsibilities and serve others. Build systems that can carry the work you hope to do.",
-      "prayer": "Father, give me wisdom to create value and manage resources faithfully. Help my work support my responsibilities and enable generosity. Amen.",
-      "contentStatus": "provided"
+      "prayer": "Father, give me wisdom to create value and manage resources faithfully. Help my work support my responsibilities and enable generosity. Amen."
     },
     {
       "id": "sermon-039",
@@ -1062,8 +237,7 @@
       "illustration": "The sermon describes a baker whose careful attention to quality and customer care led people to recommend her work without a large advertising budget.",
       "practicalApplication": "Audit a recent project. Identify one improvement in quality, speed, or accuracy and implement it today.",
       "conclusion": "Reject mediocrity and develop mastery. Let your work carry your testimony through careful, consistent service.",
-      "prayer": "Father, give me diligence and skill. Help me do my work with care and represent You through excellence and integrity. Amen.",
-      "contentStatus": "provided"
+      "prayer": "Father, give me diligence and skill. Help me do my work with care and represent You through excellence and integrity. Amen."
     },
     {
       "id": "sermon-040",
@@ -1100,8 +274,7 @@
       "illustration": "The sermon compares structure to infrastructure that helps carry growth and prevents progress from depending on trial and error alone.",
       "practicalApplication": "Choose one area of life and establish a clear weekly routine or tracking system. Review what worked at the end of the week.",
       "conclusion": "Order can make effort more sustainable. Build simple systems that support the next level of responsibility.",
-      "prayer": "God of order, give me wisdom to build structures that serve what matters. Help me move from struggle toward stability and steady growth. Amen.",
-      "contentStatus": "provided"
+      "prayer": "God of order, give me wisdom to build structures that serve what matters. Help me move from struggle toward stability and steady growth. Amen."
     },
     {
       "id": "sermon-041",
@@ -1139,8 +312,7 @@
       "illustration": "The sermon compares authority to a badge that identifies a responsibility and the backing of the one who grants it.",
       "practicalApplication": "Choose one area where you have responsibility. Respond with courage, integrity, and service rather than passivity or control.",
       "conclusion": "You are empowered to serve faithfully, not to dominate. Align your actions with Christ's example and authority.",
-      "prayer": "Lord, help me understand the responsibility You have entrusted to me. Give me courage and humility to serve under Your authority. Amen.",
-      "contentStatus": "provided"
+      "prayer": "Lord, help me understand the responsibility You have entrusted to me. Give me courage and humility to serve under Your authority. Amen."
     },
     {
       "id": "sermon-042",
@@ -1178,8 +350,7 @@
       "illustration": "The sermon uses the image of a battery that needs ongoing connection to explain why spiritual practices should be maintained over time.",
       "practicalApplication": "Choose a consistent time for prayer and Scripture this week and identify one person or task you can serve through that renewed focus.",
       "conclusion": "You are called to be a channel of service, not to rely on self-generated strength. Stay rooted in Scripture and connected to God.",
-      "prayer": "Father, renew my strength through Your Spirit and Word. Help me serve others faithfully and remain connected to You. Amen.",
-      "contentStatus": "provided"
+      "prayer": "Father, renew my strength through Your Spirit and Word. Help me serve others faithfully and remain connected to You. Amen."
     },
     {
       "id": "sermon-043",
@@ -1216,8 +387,7 @@
       "illustration": "The sermon describes obstacles as opportunities to practice resilience and seek solutions rather than as automatic stop signs.",
       "practicalApplication": "Notice one recurring negative thought. Compare it with Scripture, replace it with a truthful statement, and take one appropriate step forward.",
       "conclusion": "A renewed mind can help daily life reflect the authority and hope believers receive in Christ.",
-      "prayer": "Lord, renew my mind and help me respond to challenges with faith, humility, and resilience. Teach me to see people and opportunities as You do. Amen.",
-      "contentStatus": "provided"
+      "prayer": "Lord, renew my mind and help me respond to challenges with faith, humility, and resilience. Teach me to see people and opportunities as You do. Amen."
     },
     {
       "id": "sermon-044",
@@ -1254,8 +424,7 @@
       "illustration": "Joseph's service in Egypt demonstrates how thoughtful work and sound administration can affect a wider society.",
       "practicalApplication": "Identify one problem in your workplace or community and take a practical, respectful step toward addressing it.",
       "conclusion": "God can enlarge a person's sphere of service. Develop competence, build credibility, and use influence for positive impact.",
-      "prayer": "God, help me serve my community with wisdom and integrity. Give me the capacity to solve problems and contribute to lasting good. Amen.",
-      "contentStatus": "provided"
+      "prayer": "God, help me serve my community with wisdom and integrity. Give me the capacity to solve problems and contribute to lasting good. Amen."
     },
     {
       "id": "sermon-045",
@@ -1292,8 +461,7 @@
       "illustration": "The sermon contrasts a visible title with the daily responsibility and character required to support it.",
       "practicalApplication": "Choose one small responsibility you have been neglecting and complete it reliably. Ask where your character needs strengthening before taking on more.",
       "conclusion": "Leadership grows from maturity, self-discipline, and service. Carry influence with humility and integrity.",
-      "prayer": "Father, develop in me the character and capacity to lead faithfully. Help me serve others with humility and integrity. Amen.",
-      "contentStatus": "provided"
+      "prayer": "Father, develop in me the character and capacity to lead faithfully. Help me serve others with humility and integrity. Amen."
     },
     {
       "id": "sermon-046",
@@ -1330,8 +498,7 @@
       "illustration": "The sermon compares discipline to a fence that protects the seeds of progress and helps preserve what has been built.",
       "practicalApplication": "Identify the routines that have sustained your growth. Reinforce one of them and remove one distraction that threatens it.",
       "conclusion": "Be intentional about keeping the growth you have received. Stay alert, disciplined, and connected to supportive practices.",
-      "prayer": "Lord, help me guard my heart and preserve the growth You are building in me. Give me consistency and wisdom for the seasons ahead. Amen.",
-      "contentStatus": "provided"
+      "prayer": "Lord, help me guard my heart and preserve the growth You are building in me. Give me consistency and wisdom for the seasons ahead. Amen."
     },
     {
       "id": "sermon-047",
@@ -1369,8 +536,7 @@
       "illustration": "The sermon describes a year-end review as a way to identify progress and lessons, much like checking training and pace after a race.",
       "practicalApplication": "Review spiritual health, decisions, relationships, finances, and productivity. Write what worked, what failed, and what should change.",
       "conclusion": "Reflection turns experience into insight. Use what you learn to realign with God's will and enter the next season with gratitude and clarity.",
-      "prayer": "Lord, help me review my journey honestly. Show me where You have worked, where I need to grow, and how to move forward wisely. Amen.",
-      "contentStatus": "provided"
+      "prayer": "Lord, help me review my journey honestly. Show me where You have worked, where I need to grow, and how to move forward wisely. Amen."
     },
     {
       "id": "sermon-048",
@@ -1407,8 +573,7 @@
       "illustration": "The sermon compares a season's finish to a race: maintaining attention and pace matters through the final stretch.",
       "practicalApplication": "Choose one specific goal to complete before the end of the season and protect time for the work it requires.",
       "conclusion": "Finish this season with strength rather than complacency. Stay in the Word, maintain focus, and complete the work before you.",
-      "prayer": "Father, give me strength to finish faithfully. Preserve me from weariness and distraction and help me complete the assignments You have entrusted to me. Amen.",
-      "contentStatus": "provided"
+      "prayer": "Father, give me strength to finish faithfully. Preserve me from weariness and distraction and help me complete the assignments You have entrusted to me. Amen."
     },
     {
       "id": "sermon-049",
@@ -1445,8 +610,7 @@
       "illustration": "The sermon contrasts entering the future with wishes alone against stepping into a future for which one has prayed and prepared.",
       "practicalApplication": "Write a vision for the coming year, identify clear goals, and break them into manageable actions and timelines.",
       "conclusion": "The future is too important to leave to chance. Commit plans to God and build a practical structure for faithful execution.",
-      "prayer": "Lord, give me clarity for the future and wisdom to plan well. Establish my thoughts and help me act in line with Your direction. Amen.",
-      "contentStatus": "provided"
+      "prayer": "Lord, give me clarity for the future and wisdom to plan well. Establish my thoughts and help me act in line with Your direction. Amen."
     },
     {
       "id": "sermon-050",
@@ -1483,56 +647,7 @@
       "illustration": "The sermon describes transition as releasing the weight of a previous season so a person can move with greater clarity into the next.",
       "practicalApplication": "Name one past burden to release and one new responsibility to prepare for. Identify a practical first step toward it.",
       "conclusion": "You are at the threshold of a new season. Release what is behind, activate your faith, and take a thoughtful step forward.",
-      "prayer": "Father, help me release the old and prepare for the new. Give me fresh grace, clear direction, and a heart ready to follow You. Amen.",
-      "contentStatus": "provided"
-    },
-    {
-      "id": "sermon-051",
-      "week": 51,
-      "title": "Sunday Sermon Week 51",
-      "theme": "Awaiting church-approved content.",
-      "preacher": "To be supplied by church",
-      "scripture": "Awaiting church-approved content.",
-      "keyVerse": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
-      "mainPoints": [
-        {
-          "heading": "Awaiting church-approved content.",
-          "content": "Awaiting church-approved content.",
-          "scriptureReferences": [
-            "Awaiting church-approved content."
-          ]
-        }
-      ],
-      "illustration": "Awaiting church-approved content.",
-      "practicalApplication": "Awaiting church-approved content.",
-      "conclusion": "Awaiting church-approved content.",
-      "prayer": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
-    },
-    {
-      "id": "sermon-052",
-      "week": 52,
-      "title": "Sunday Sermon Week 52",
-      "theme": "Awaiting church-approved content.",
-      "preacher": "To be supplied by church",
-      "scripture": "Awaiting church-approved content.",
-      "keyVerse": "Awaiting church-approved content.",
-      "introduction": "Awaiting church-approved content.",
-      "mainPoints": [
-        {
-          "heading": "Awaiting church-approved content.",
-          "content": "Awaiting church-approved content.",
-          "scriptureReferences": [
-            "Awaiting church-approved content."
-          ]
-        }
-      ],
-      "illustration": "Awaiting church-approved content.",
-      "practicalApplication": "Awaiting church-approved content.",
-      "conclusion": "Awaiting church-approved content.",
-      "prayer": "Awaiting church-approved content.",
-      "contentStatus": "placeholder"
+      "prayer": "Father, help me release the old and prepare for the new. Give me fresh grace, clear direction, and a heart ready to follow You. Amen."
     }
   ]
 }
