@@ -8,6 +8,8 @@ type AndroidShareBridge = {
 const adRequests = new Map<string, (shown: boolean) => void>();
 const adTimeouts = new Map<string, number>();
 
+import { appendPlayStoreLink } from "./share-format";
+
 declare global {
   interface Window {
     AndroidShare?: AndroidShareBridge;
@@ -63,15 +65,16 @@ export function requestAdBeforeShare(): Promise<boolean> {
 }
 
 export async function shareText(title: string, text: string): Promise<void> {
+  const shareBody = appendPlayStoreLink(text);
   if (window.AndroidShare) {
-    window.AndroidShare.share(title, text, "");
+    window.AndroidShare.share(title, shareBody, "");
     return;
   }
   if (navigator.share) {
-    await navigator.share({ title, text });
+    await navigator.share({ title, text: shareBody });
     return;
   }
-  await navigator.clipboard.writeText(`${title}\n\n${text}`);
+  await navigator.clipboard.writeText(`${title}\n\n${shareBody}`);
 }
 
 export async function sharePdf(blob: Blob, fileName: string): Promise<void> {

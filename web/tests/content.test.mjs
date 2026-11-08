@@ -3,37 +3,49 @@ import { readFile } from "node:fs/promises";
 import test from "node:test";
 
 const expected = new Map([
-  ["sunday-school.json", ["lessons", 52]],
-  ["daily-devotionals.json", ["devotionals", 365]],
-  ["sunday-sermons.json", ["sermons", 52]],
-  ["family-devotionals.json", ["devotionals", 365]],
-  ["prayer-guides.json", ["prayerGuides", 52]],
-  ["bible-study.json", ["studies", 52]],
-  ["reports-forms.json", ["forms", 17]],
-  ["baptismal-course.json", ["modules", 4]],
-  ["discipleship-course.json", ["modules", 6]],
+  ["sunday-school.json", "lessons"],
+  ["daily-devotionals.json", "devotionals"],
+  ["sunday-sermons.json", "sermons"],
+  ["family-devotionals.json", "devotionals"],
+  ["prayer-guides.json", "prayerGuides"],
+  ["bible-study.json", "studies"],
+  ["reports-forms.json", "forms"],
+  ["baptismal-course.json", "modules"],
+  ["discipleship-course.json", "modules"],
 ]);
 
-test("all nine bundled libraries have their required records and unique IDs", async () => {
-  for (const [fileName, [collectionName, count]] of expected) {
+test("all nine bundled libraries have unique, nonempty records", async () => {
+  for (const [fileName, collectionName] of expected) {
     const text = await readFile(new URL(`../public/data/${fileName}`, import.meta.url), "utf8");
     const library = JSON.parse(text);
     const items = library[collectionName];
     assert.ok(Array.isArray(items), `${fileName} must contain ${collectionName}`);
-    assert.equal(items.length, count, `${fileName} must contain ${count} records`);
-    assert.equal(new Set(items.map((item) => item.id)).size, count, `${fileName} IDs must be unique`);
+    assert.ok(items.length > 0, `${fileName} must contain available records`);
+    assert.equal(new Set(items.map((item) => item.id)).size, items.length, `${fileName} IDs must be unique`);
     assert.ok(items.every((item) => typeof item.title === "string" && item.title.length > 0));
   }
 });
 
-test("each teaching library has a clearly marked original sample and placeholder entries", async () => {
-  for (const [fileName, [collectionName]] of expected) {
-    if (fileName === "reports-forms.json") continue;
-    if (["baptismal-course.json", "discipleship-course.json"].includes(fileName)) continue;
+test("bundled libraries contain no sample or placeholder records", async () => {
+  for (const [fileName, collectionName] of expected) {
     const library = JSON.parse(await readFile(new URL(`../public/data/${fileName}`, import.meta.url), "utf8"));
     const entries = library[collectionName];
-    assert.ok(entries.some((item) => item.contentStatus === "sample"), `${fileName} must have sample entries`);
-    assert.ok(entries.some((item) => item.contentStatus === "placeholder"), `${fileName} must retain placeholder entries`);
+    assert.ok(entries.every((item) => !["sample", "placeholder"].includes(item.contentStatus)), `${fileName} must exclude sample and placeholder entries`);
+  }
+});
+
+test("each date-based library includes the November 8, 2026 lesson or devotional", async () => {
+  const dated = [
+    ["sunday-school.json", "lessons", "week", 45],
+    ["daily-devotionals.json", "devotionals", "day", 312],
+    ["sunday-sermons.json", "sermons", "week", 45],
+    ["family-devotionals.json", "devotionals", "day", 312],
+    ["prayer-guides.json", "prayerGuides", "week", 45],
+    ["bible-study.json", "studies", "week", 45],
+  ];
+  for (const [fileName, collectionName, period, value] of dated) {
+    const library = JSON.parse(await readFile(new URL(`../public/data/${fileName}`, import.meta.url), "utf8"));
+    assert.ok(library[collectionName].some((item) => item[period] === value), `${fileName} must include period ${value}`);
   }
 });
 

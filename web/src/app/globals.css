@@ -21,7 +21,7 @@ button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-
 .app-shell { min-height: 100vh; display: flex; flex-direction: column; }
 .topbar { height: 72px; padding: 0 34px; display: flex; justify-content: space-between; align-items: center; background: var(--surface); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 20; }
 .brand { display: flex; align-items: center; gap: 11px; border: 0; background: none; padding: 0; text-align: left; cursor: pointer; }
-.brand-mark { width: 39px; height: 39px; border-radius: 12px 12px 12px 4px; background: var(--blue); color: white; display: grid; place-items: center; font-family: Georgia, serif; font-size: 23px; box-shadow: inset -3px -3px 0 #ffd700; }
+.brand-mark { width: 39px; height: 39px; flex: 0 0 auto; border-radius: 9px; background: white; object-fit: contain; }
 .brand strong, .brand small { display: block; }
 .brand strong { font-family: Georgia, "Times New Roman", serif; font-size: 17px; }
 .brand small { margin-top: 2px; color: var(--muted); font-size: 9px; letter-spacing: 1.25px; }
@@ -48,9 +48,8 @@ h1, h2, h3, p { margin-top: 0; }
 .welcome-panel h1 { font-size: clamp(30px, 4vw, 43px); }
 .welcome-copy { margin: 10px 0 18px; color: var(--muted); }
 .date-label { color: #788398; font-size: 12px; }
-.welcome-art { width: 150px; height: 150px; display: grid; place-content: center; justify-items: center; position: relative; border-radius: 50%; color: var(--blue); background: radial-gradient(circle, #fff 0%, #edf2ff 69%, #e8edfb 70%); }
-.welcome-art::after { position: absolute; inset: 9px; border: 1px solid #ffd700; border-radius: 50%; content: ""; }
-.welcome-art span { padding-top: 7px; color: #8d7b00; font-family: Georgia, serif; font-size: 11px; letter-spacing: 2px; }
+.welcome-art { width: 150px; height: 150px; flex: 0 0 auto; display: grid; place-items: center; }
+.welcome-art img { width: 100%; height: 100%; object-fit: contain; }
 .quick-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin: 21px 0 35px; }
 .quick-card { min-height: 110px; padding: 18px; display: flex; align-items: center; gap: 13px; border: 1px solid var(--line); border-radius: 15px; background: white; }
 .quick-icon, .library-icon { flex: 0 0 auto; width: 42px; height: 42px; display: grid; place-items: center; border-radius: 12px; color: #9b8200; background: #fff9d8; }
