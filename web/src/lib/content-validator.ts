@@ -48,14 +48,22 @@ export function validateLibraryData(
     "sunday-school": ["week", "scripture", "memoryVerse", "lessonContent", "discussionQuestions"],
     "daily-devotionals": ["day", "scripture", "keyVerse", "reflection", "prayer"],
     "sunday-sermons": ["week", "scripture", "keyVerse", "mainPoints", "practicalApplication"],
-    "family-devotionals": ["day", "scripture", "memoryVerse", "devotionalMessage", "familyActivity"],
     "prayer-guides": ["week", "scripture", "prayerPoints", "declarations"],
     "bible-study": ["week", "scripture", "studyOutline", "discussionQuestions"],
     "baptismal-course": ["moduleNumber", "scriptureReferences", "lessons", "reviewQuestions"],
     "discipleship-course": ["moduleNumber", "scriptureReferences", "lessons", "reviewQuestions", "assignments"],
   };
   const records = collection as Array<Record<string, unknown>>;
-  if (records.some((record) => (requiredKeys[expectedId] ?? []).some((key) => record[key] === undefined || record[key] === null))) {
+  const hasRequiredKeys = (record: Record<string, unknown>, keys: string[]) =>
+    keys.every((key) => record[key] !== undefined && record[key] !== null);
+  if (
+    expectedId === "family-devotionals"
+      ? records.some((record) => !(
+        hasRequiredKeys(record, ["day", "scripture", "memoryVerse", "devotionalMessage", "familyActivity"]) ||
+        hasRequiredKeys(record, ["day", "scripture", "memoryVerse", "lessonContent", "discussionQuestions", "practicalApplication", "conclusion", "prayer"])
+      ))
+      : records.some((record) => !hasRequiredKeys(record, requiredKeys[expectedId] ?? []))
+  ) {
     throw new Error(`${expectedName} is missing required fields. Please contact the app administrator.`);
   }
   if (expectedId === "reports-forms") {

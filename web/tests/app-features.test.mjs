@@ -44,6 +44,13 @@ test("scheduled content requires an exact day or week match", async () => {
   assert.equal(getScheduledContent(items, "week", 47), undefined);
 });
 
+test("scheduled content falls back to the nearest available prior entry", async () => {
+  const { getAvailableScheduledContent } = await loadTypeScriptModule("../src/lib/content-selection.ts");
+  const items = [{ id: "early", day: 2 }, { id: "recent", day: 8 }, { id: "later", day: 12 }];
+  assert.equal(getAvailableScheduledContent(items, "day", 10).id, "recent");
+  assert.equal(getAvailableScheduledContent(items, "day", 1).id, "early");
+});
+
 test("shared content is sectioned and ends with the Play Store link", async () => {
   const { appendPlayStoreLink, formatContentShare, PLAY_STORE_URL } = await loadTypeScriptModule("../src/lib/share-format.ts");
   const text = formatContentShare("Bible Study", {
@@ -59,6 +66,30 @@ test("shared content is sectioned and ends with the Play Store link", async () =
   assert.ok(!shared.includes("contentStatus"));
 });
 
+test("family devotional sharing preserves every family devotional section", async () => {
+  const { formatContentShare } = await loadTypeScriptModule("../src/lib/share-format.ts");
+  const devotionalMessage = "A complete family devotional message that must not be truncated.";
+  const text = formatContentShare("Family Devotional", {
+    id: "fd-001",
+    day: 1,
+    title: "Godly Families",
+    scripture: "Matthew 6:33",
+    memoryVerse: "Matthew 6:33",
+    openingPrayer: "Open prayer",
+    introduction: "Full introduction",
+    devotionalMessage,
+    familyDiscussion: ["Question one", "Question two"],
+    familyActivity: "Full activity",
+    lifeApplication: "Full application",
+    closingPrayer: "Closing prayer",
+  });
+
+  assert.ok(text.includes(devotionalMessage));
+  assert.ok(text.includes("Opening Prayer:\nOpen prayer"));
+  assert.ok(text.includes("Family Discussion:\n- Question one\n- Question two"));
+  assert.ok(text.includes("Closing Prayer:\nClosing prayer"));
+});
+
 test("library validator rejects mismatched or malformed records", async () => {
   const { validateLibraryData } = await loadTypeScriptModule("../src/lib/content-validator.ts");
   const lesson = {
@@ -71,6 +102,21 @@ test("library validator rejects mismatched or malformed records", async () => {
   assert.equal(validateLibraryData(sparse, "sunday-school", "Sunday School", "lessons"), sparse);
   assert.throws(() => validateLibraryData(valid, "bible-study", "Bible Study", "studies"));
   assert.throws(() => validateLibraryData({ ...valid, lessons: [{ id: "ss-001", title: "Only a title" }] }, "sunday-school", "Sunday School", "lessons"));
+});
+
+test("every bundled library passes the runtime content validator", async () => {
+  const [{ LIBRARIES }, { validateLibraryData }] = await Promise.all([
+    loadTypeScriptModule("../src/lib/library-registry.ts"),
+    loadTypeScriptModule("../src/lib/content-validator.ts"),
+  ]);
+  for (const library of LIBRARIES) {
+    const data = JSON.parse(await readFile(new URL(`../public/data/${library.dataFile}`, import.meta.url), "utf8"));
+    assert.equal(
+      validateLibraryData(data, library.id, library.name, library.collection),
+      data,
+      `${library.dataFile} must be loadable by the app`,
+    );
+  }
 });
 
 test("reports library validates all 17 complete form templates", async () => {

@@ -10,7 +10,7 @@ import type { LucideIcon } from "lucide-react";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { devotionalDay, programmeWeek } from "@/lib/date-manager";
 import { getCollection } from "@/lib/content-service";
-import { getScheduledContent } from "@/lib/content-selection";
+import { getAvailableScheduledContent } from "@/lib/content-selection";
 import { getLibrary } from "@/lib/json-loader";
 import { LIBRARIES } from "@/lib/library-registry";
 import { clearUserData, getDatabase } from "@/lib/offline-storage";
@@ -132,6 +132,7 @@ function SignatureInput({ value, onChange }: { value: string; onChange: (value: 
 
 export default function Home() {
   const [libraries, setLibraries] = useState<Partial<Record<LibraryId, LibraryData>>>({});
+  const [contentLoading, setContentLoading] = useState(true);
   const [loadError, setLoadError] = useState("");
   const [screen, setScreen] = useState<Screen>("home");
   const [libraryId, setLibraryId] = useState<LibraryId>("sunday-school");
@@ -198,8 +199,18 @@ export default function Home() {
   useEffect(() => {
     let active = true;
     Promise.all(LIBRARIES.map(async (library) => [library.id, await getLibrary(library.id)] as const))
-      .then((loaded) => { if (active) setLibraries(Object.fromEntries(loaded)); })
-      .catch((error: unknown) => { if (active) setLoadError(error instanceof Error ? error.message : "The bundled library content could not be loaded."); });
+      .then((loaded) => {
+        if (active) {
+          setLibraries(Object.fromEntries(loaded));
+          setContentLoading(false);
+        }
+      })
+      .catch((error: unknown) => {
+        if (active) {
+          setLoadError(error instanceof Error ? error.message : "The bundled library content could not be loaded.");
+          setContentLoading(false);
+        }
+      });
     loadSavedData().catch(() => { if (active) setNotice("Local storage could not be opened. Check available device storage and restart the app."); });
     if ("serviceWorker" in navigator) {
       navigator.serviceWorker.register("./sw.js").catch(() => setNotice("Offline cache setup failed. The bundled Android content is still available."));
@@ -217,14 +228,21 @@ export default function Home() {
   const currentItems = useMemo(() => collectionOf(libraries[libraryId], libraryId), [libraries, libraryId]);
   const dayIndex = devotionalDay(new Date()) - 1;
   const weekIndex = programmeWeek(new Date(), programmeStart, weekStartsOn) - 1;
-  const todayDevotional = getScheduledContent(collectionOf(libraries["daily-devotionals"], "daily-devotionals"), "day", dayIndex + 1);
-  const thisWeekLesson = getScheduledContent(collectionOf(libraries["sunday-school"], "sunday-school"), "week", weekIndex + 1);
+  const todayDevotional = getAvailableScheduledContent(collectionOf(libraries["daily-devotionals"], "daily-devotionals"), "day", dayIndex + 1);
+  const thisWeekLesson = getAvailableScheduledContent(collectionOf(libraries["sunday-school"], "sunday-school"), "week", weekIndex + 1);
   const completedCounts = useMemo(() => Object.fromEntries(LIBRARIES.map((library) => [
     library.id,
     collectionOf(libraries[library.id], library.id).filter((item) => reading[itemId(library.id, item.id)]).length,
   ])) as Record<LibraryId, number>, [libraries, reading]);
 
   const enterLibrary = useCallback((id: LibraryId, preferred?: ContentRecord) => {
+    if (contentLoading && !libraries[id]) {
+      setLibraryId(id);
+      setSelectedForm(null);
+      setRecord(null);
+      setScreen("library");
+      return;
+    }
     const items = collectionOf(libraries[id], id);
     setLibraryId(id);
     setSelectedForm(null);
@@ -236,13 +254,13 @@ export default function Home() {
     const dayBased = id === "daily-devotionals" || id === "family-devotionals";
     const weekBased = ["sunday-school", "sunday-sermons", "prayer-guides", "bible-study"].includes(id);
     const value = preferred ?? (dayBased
-      ? getScheduledContent(items, "day", dayIndex + 1)
-      : weekBased ? getScheduledContent(items, "week", weekIndex + 1) : items[0]);
+      ? getAvailableScheduledContent(items, "day", dayIndex + 1)
+      : weekBased ? getAvailableScheduledContent(items, "week", weekIndex + 1) : items[0]);
     if (!value) {
       setRecord(null);
       setListIndex(0);
       setScreen("library");
-      setNotice("No content to display");
+      setNotice("No resources are currently available in this library.");
       return;
     }
     setRecord(value);
@@ -257,7 +275,7 @@ export default function Home() {
     saveProgress
       .then(loadSavedData)
       .catch(() => setNotice("Could not save reading history on this device."));
-  }, [dayIndex, libraries, loadSavedData, reading, weekIndex]);
+  }, [contentLoading, dayIndex, libraries, loadSavedData, reading, weekIndex]);
 
   const openRecord = useCallback((id: LibraryId, item: ContentRecord) => {
     if (id === "reports-forms") {
@@ -522,11 +540,11 @@ export default function Home() {
             </div>
             <div className="quick-row">
               <article className="quick-card devotional-card">
-                <div className="quick-icon"><Sun size={20} /></div><div className="quick-meta"><span>TODAY&apos;S READING</span><strong>{todayDevotional?.title ?? "Daily Devotional"}</strong><small>Day {devotionalDay(new Date())} of 365</small></div>
-                <button className="text-button" onClick={() => enterLibrary("daily-devotionals", todayDevotional)}>Read today <ChevronRight size={16} /></button>
+                <div className="quick-icon"><Sun size={20} /></div><div className="quick-meta"><span>{todayDevotional?.day === devotionalDay(new Date()) ? "TODAY'S READING" : "AVAILABLE READING"}</span><strong>{todayDevotional?.title ?? "Daily Devotional"}</strong><small>{todayDevotional ? `Day ${todayDevotional.day} of 365` : "Loading devotional..."}</small></div>
+                <button className="text-button" onClick={() => enterLibrary("daily-devotionals", todayDevotional)}>{todayDevotional?.day === devotionalDay(new Date()) ? "Read today" : "Read available"} <ChevronRight size={16} /></button>
               </article>
               <article className="quick-card">
-                <div className="quick-icon blue"><BookOpen size={20} /></div><div className="quick-meta"><span>THIS WEEK</span><strong>{thisWeekLesson?.title ?? "Sunday School"}</strong><small>Programme week {weekIndex + 1} of 52</small></div>
+                <div className="quick-icon blue"><BookOpen size={20} /></div><div className="quick-meta"><span>{thisWeekLesson?.week === weekIndex + 1 ? "THIS WEEK" : "AVAILABLE LESSON"}</span><strong>{thisWeekLesson?.title ?? "Sunday School"}</strong><small>{thisWeekLesson ? `Programme week ${thisWeekLesson.week} of 52` : "Loading lessons..."}</small></div>
                 <button className="text-button" onClick={() => enterLibrary("sunday-school", thisWeekLesson)}>Open lesson <ChevronRight size={16} /></button>
               </article>
             </div>
@@ -576,11 +594,11 @@ export default function Home() {
             </div> : <>
               <div className="list-tools">
                 <div className="search-field"><Search size={17} /><input value={search} onChange={(event) => setSearch(event.target.value)} placeholder={`Search ${currentLibrary.name.toLowerCase()}...`} /><button aria-label="Clear search" onClick={() => setSearch("")}><X size={15} /></button></div>
-                {currentLibrary.id !== "baptismal-course" && currentLibrary.id !== "discipleship-course" && <label className="selector-label">{currentLibrary.id.includes("devotional") ? "Day" : "Week"} <select value={record?.id ?? ""} onChange={(event) => { const selected = currentItems.find((item) => item.id === event.target.value); if (selected) openRecord(libraryId, selected); }}><option value="" disabled>Select</option>{currentItems.map((item, index) => <option key={item.id} value={item.id}>{currentLibrary.id.includes("devotional") ? `Day ${item.day ?? index + 1}` : `Week ${item.week ?? index + 1}`} · {item.title}</option>)}</select>{currentLibrary.id.includes("devotional") && <><span className="date-picker-label">Date</span><input aria-label="Select devotional date" type="date" onChange={(event) => { if (!event.target.value) return; const day = devotionalDay(new Date(`${event.target.value}T12:00:00`)); const selected = getScheduledContent(currentItems, "day", day); if (selected) openRecord(libraryId, selected); else { setRecord(null); setNotice("No content to display"); } }} /></>}</label>}
+                {currentLibrary.id !== "baptismal-course" && currentLibrary.id !== "discipleship-course" && <label className="selector-label">{currentLibrary.id.includes("devotional") ? "Day" : "Week"} <select value={record?.id ?? ""} onChange={(event) => { const selected = currentItems.find((item) => item.id === event.target.value); if (selected) openRecord(libraryId, selected); }}><option value="" disabled>Select</option>{currentItems.map((item, index) => <option key={item.id} value={item.id}>{currentLibrary.id.includes("devotional") ? `Day ${item.day ?? index + 1}` : `Week ${item.week ?? index + 1}`} · {item.title}</option>)}</select>{currentLibrary.id.includes("devotional") && <><span className="date-picker-label">Date</span><input aria-label="Select devotional date" type="date" onChange={(event) => { if (!event.target.value) return; const day = devotionalDay(new Date(`${event.target.value}T12:00:00`)); const selected = getAvailableScheduledContent(currentItems, "day", day); if (selected) { openRecord(libraryId, selected); if (selected.day !== day) setNotice(`Showing available devotional Day ${selected.day} for the selected date.`); } }} /></>}</label>}
               </div>
               {(currentLibrary.id === "baptismal-course" || currentLibrary.id === "discipleship-course") && <div className="library-grid course-grid">{activeItems.map((item) => <button className="library-card" key={item.id} onClick={() => openRecord(libraryId, item)}><span className="library-icon"><BookOpen size={22} /></span><span className="library-card-content"><strong>{item.title}</strong><small>{textValue(item.description)}</small><em>Module {item.moduleNumber}</em></span><ChevronRight size={18} /></button>)}</div>}
               {currentLibrary.id !== "baptismal-course" && currentLibrary.id !== "discipleship-course" && <div className="content-list">{activeItems.slice(0, 100).map((item) => <button className="content-row" key={item.id} onClick={() => openRecord(libraryId, item)}><span className="row-number">{String(item.day ?? item.week ?? 0).padStart(2, "0")}</span><span className="content-row-text"><strong>{item.title}</strong><small>{textValue(item.theme ?? item.topic ?? item.scripture ?? item.description)}</small></span>{reading[itemId(libraryId, item.id)] && <Check className="done-check" size={18} />}<ChevronRight size={18} /></button>)}</div>}
-              {currentItems.length === 0 ? <div className="empty-state"><Search size={30} /><h3>No content to display</h3></div> : activeItems.length === 0 && <div className="empty-state"><Search size={30} /><h3>No matching content</h3><p>Try a different title, topic or scripture reference.</p></div>}
+              {contentLoading && currentItems.length === 0 ? <div className="empty-state" role="status"><Search size={30} /><h3>Loading library content...</h3></div> : loadError && currentItems.length === 0 ? <div className="empty-state"><Search size={30} /><h3>Library content is unavailable</h3><p>Please restart the app or contact the app administrator.</p></div> : currentItems.length === 0 ? <div className="empty-state"><Search size={30} /><h3>No resources are available yet</h3></div> : activeItems.length === 0 && <div className="empty-state"><Search size={30} /><h3>No matching content</h3><p>Try a different title, topic or scripture reference.</p></div>}
             </>}
           </div>}
 
@@ -618,7 +636,13 @@ export default function Home() {
                 <button className="action-button" aria-label="Decrease reading text size" onClick={() => updateReaderFontSize(readerFontSize - 1).catch(() => setNotice("Could not save reading appearance."))}>A−</button>
                 <button className="action-button" aria-label="Increase reading text size" onClick={() => updateReaderFontSize(readerFontSize + 1).catch(() => setNotice("Could not save reading appearance."))}>A+</button>
                 <button className="action-button" onClick={() => openNoteEditor(undefined, { id: libraryId, record })}><NotebookPen size={17} /> Jot a note</button>
-                <button className="action-button" onClick={() => shareTextWithAd(record.title, formatContentShare(currentLibrary.name, record)).catch(() => setNotice("Sharing was cancelled or is unavailable."))}><Share2 size={17} /> Share</button>
+                <button className="action-button" onClick={() => {
+                  if (libraryId === "family-devotionals") {
+                    void createPdf(record.title, currentLibrary.name, record);
+                  } else {
+                    void shareTextWithAd(record.title, formatContentShare(currentLibrary.name, record)).catch(() => setNotice("Sharing was cancelled or is unavailable."));
+                  }
+                }}><Share2 size={17} /> Share</button>
                 <button className="action-button" onClick={() => createPdf(record.title, currentLibrary.name, record)}><Download size={17} /> PDF</button>
               </div>
               <div className="complete-row"><span>{reading[itemId(libraryId, record.id)] ? "Marked as completed" : "Finished reading?"}</span><AppButton secondary onClick={() => markCompleted(libraryId, record).catch(() => setNotice("Could not save your reading progress."))}>{reading[itemId(libraryId, record.id)] ? "Undo completion" : "Mark completed"}</AppButton></div>
@@ -645,7 +669,7 @@ export default function Home() {
             {search.trim() && <><p className="result-count">{allSearchResults.length} results</p><div className="content-list">{allSearchResults.map(({ library, item, excerpt }) => <button className="content-row result-row" key={`${library.id}:${item.id}`} onClick={() => openRecord(library.id, item)}><span className="library-icon"><Search size={17} /></span><span className="content-row-text"><strong>{item.title}</strong><small>{library.name} · {excerpt}</small></span><ChevronRight size={18} /></button>)}</div>{allSearchResults.length === 0 && <div className="empty-state"><Search size={30} /><h3>No results found</h3><p>Try another title, topic or scripture reference.</p></div>}</>}
           </div>}
 
-          {screen === "donate" && <div className="page narrow-page"><div className="page-heading"><p className="eyebrow">SUPPORT THE MINISTRY</p><h1>Donate</h1><p className="muted">Thank you for supporting the work of RMCC Intl.</p></div><div className="donate-card"><span className="library-icon"><Heart size={24} /></span><h2>Giving information</h2><p>Official donation details have not been supplied for this version of the app.</p><dl><div><dt>Bank name</dt><dd>To be provided by the church</dd></div><div><dt>Account name</dt><dd>To be provided by the church</dd></div><div><dt>Account number</dt><dd>To be provided by the church</dd></div></dl><small>No payment is collected through this app.</small></div></div>}
+          {screen === "donate" && <div className="page narrow-page"><div className="page-heading"><p className="eyebrow">SUPPORT THE MINISTRY</p><h1>Donate</h1><p className="muted">Thank you for supporting the work of RMCC Intl.</p></div><div className="donate-card"><span className="library-icon"><Heart size={24} /></span><h2>Giving information</h2><p>Use the bank account details below for your donation.</p><dl><div><dt>Bank name</dt><dd>FCMB</dd></div><div><dt>Account name</dt><dd>Restoration Mandate Gospel Mission International</dd></div><div><dt>Account number</dt><dd>6838521011</dd></div></dl><small>No payment is collected through this app.</small></div></div>}
 
           {screen === "privacy" && <div className="page narrow-page"><div className="page-heading"><p className="eyebrow">YOUR INFORMATION</p><h1>Privacy</h1><p className="muted">How RMCC Church Library handles your data.</p></div><div className="privacy-card"><section><h2>Stored on this device</h2><p>Bookmarks, jotter notes, reading history, course progress, programme settings, form drafts and saved reports are stored in the app&apos;s local IndexedDB database. They remain available offline and are not uploaded to a church server.</p></section><section><h2>Advertising</h2><p>The Android app includes the Google Mobile Ads SDK. Before sharing library resources or reports as text or PDF, the app requests an interstitial ad. If an ad is unavailable, you can continue sharing. Google may process data as described in its privacy information when an ad loads.</p></section><section><h2>Manage local data</h2><p>Deleting local data permanently removes notes, bookmarks, saved forms, reports and reading progress from this device.</p><button className="button button-danger" onClick={async () => { if (!window.confirm("Clear all notes, bookmarks, form drafts, saved reports and reading progress from this device? This cannot be undone.")) return; try { await clearUserData(); await loadSavedData(); setNotice("Local application data cleared."); } catch { setNotice("Could not clear local data. Please try again."); } }}>Clear local data</button></section><p className="app-version">RMCC Church Library · Version 1.0</p></div></div>}
         </section>
