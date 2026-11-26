@@ -13,12 +13,12 @@
 }
 
 * { box-sizing: border-box; }
-html { min-height: 100%; background: var(--wash); }
-body { margin: 0; color: var(--ink); background: var(--wash); font-family: Arial, Helvetica, sans-serif; font-size: 15px; }
+html { width: 100%; min-height: 100%; overflow-x: clip; background: var(--wash); }
+body { width: 100%; max-width: 100%; margin: 0; overflow-x: clip; color: var(--ink); background: var(--wash); font-family: Arial, Helvetica, sans-serif; font-size: 15px; }
 button, input, textarea, select { font: inherit; }
 button { color: inherit; }
 button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible { outline: 3px solid #4a76f25c; outline-offset: 2px; }
-.app-shell { min-height: 100vh; display: flex; flex-direction: column; }
+.app-shell { width: 100%; min-width: 0; min-height: 100vh; display: flex; flex-direction: column; }
 .topbar { height: 72px; padding: 0 34px; display: flex; justify-content: space-between; align-items: center; background: var(--surface); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 20; }
 .brand { display: flex; align-items: center; gap: 11px; border: 0; background: none; padding: 0; text-align: left; cursor: pointer; }
 .brand-mark { width: 39px; height: 39px; flex: 0 0 auto; border-radius: 9px; background: white; object-fit: contain; }
@@ -29,7 +29,7 @@ button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-
 .icon-button { min-width: 40px; min-height: 40px; display: inline-grid; place-items: center; border: 0; border-radius: 11px; background: transparent; color: #647084; cursor: pointer; }
 .icon-button:hover { background: #f0f3f9; color: var(--blue); }
 .icon-button.bookmarked { color: var(--blue); }
-.workspace { display: flex; flex: 1; width: min(1440px, 100%); margin: 0 auto; }
+.workspace { display: flex; flex: 1; width: min(1440px, 100%); min-width: 0; margin: 0 auto; }
 .side-nav { width: 230px; flex: 0 0 230px; padding: 32px 18px; border-right: 1px solid var(--line); background: #fbfcfe; }
 .nav-caption { padding: 0 13px 10px; color: #9aa4b4; font-weight: 700; font-size: 10px; letter-spacing: 1.35px; }
 .nav-caption-library { margin-top: 27px; }
@@ -41,7 +41,8 @@ button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-
 .page { max-width: 1000px; margin: 0 auto; }
 .home-page { max-width: 1080px; }
 .narrow-page { max-width: 780px; }
-.welcome-panel { min-height: 226px; padding: 34px 42px; display: flex; align-items: center; justify-content: space-between; border: 1px solid #e8ecf5; border-radius: 20px; background: linear-gradient(115deg, #fff 60%, #f6f8ff); overflow: hidden; }
+.welcome-panel { min-height: 226px; padding: 34px 42px; display: flex; align-items: center; justify-content: space-between; gap: 16px; border: 1px solid #e8ecf5; border-radius: 20px; background: linear-gradient(115deg, #fff 60%, #f6f8ff); overflow: hidden; }
+.welcome-panel > div:first-child { min-width: 0; }
 .eyebrow { margin: 0 0 9px; color: var(--blue); font-size: 10px; line-height: 1.4; font-weight: 800; letter-spacing: 1.45px; }
 h1, h2, h3, p { margin-top: 0; }
 .welcome-panel h1, .page-heading h1, .reader-title-row h1 { margin: 0; font-family: Georgia, "Times New Roman", serif; font-weight: 700; letter-spacing: -.5px; }
@@ -105,7 +106,7 @@ h1, h2, h3, p { margin-top: 0; }
 .search-field input { width: 100%; min-width: 0; border: 0; outline: 0; color: var(--ink); background: transparent; font-size: 13px; }
 .search-field input:focus-visible { outline: 0; }
 .search-field button { padding: 4px; display: grid; place-items: center; border: 0; background: none; color: #8c96a7; cursor: pointer; }
-.selector-label { display: flex; align-items: center; gap: 9px; color: var(--muted); font-size: 12px; }
+.selector-label { min-width: 0; max-width: 100%; display: flex; align-items: center; gap: 9px; color: var(--muted); font-size: 12px; }
 .selector-label select { max-width: 310px; padding: 10px; border: 1px solid var(--line); border-radius: 9px; background: white; color: var(--ink); font-size: 12px; }
 .selector-label input[type="date"] { padding: 9px; border: 1px solid var(--line); border-radius: 9px; background: white; color: var(--ink); font-size: 11px; }
 .date-picker-label { margin-left: 5px; }
@@ -273,11 +274,11 @@ h1, h2, h3, p { margin-top: 0; }
   .page-heading h1 { font-size: 29px; }
   .page-heading .eyebrow { margin-top: 15px; }
   .list-tools { align-items: stretch; }
+  .list-tools > * { min-width: 0; max-width: 100%; }
   .bookmark-tools { flex-direction: column; gap: 0; }
   .bookmark-tools select { width: 100%; margin-bottom: 12px; }
-  .selector-label { justify-content: space-between; }
-  .selector-label select { max-width: 70%; }
-  .selector-label input[type="date"] { max-width: 44%; }
+  .selector-label { width: 100%; flex-wrap: wrap; justify-content: space-between; }
+  .selector-label select, .selector-label input[type="date"] { min-width: 0; max-width: 100%; flex: 1 1 40%; }
   .date-picker-label { display: none; }
   .content-row { min-height: 68px; padding: 11px; gap: 10px; }
   .content-row-text strong { font-size: 12px; }
@@ -291,7 +292,10 @@ h1, h2, h3, p { margin-top: 0; }
   .form-actions { display: grid; }
   .form-actions .button { width: 100%; }
   .bottom-nav { height: 59px; padding-bottom: env(safe-area-inset-bottom); display: flex; justify-content: space-around; position: fixed; right: 0; bottom: 27px; left: 0; z-index: 20; border-top: 1px solid var(--line); background: #fffffff5; backdrop-filter: blur(12px); }
-  .bottom-nav button { min-width: 65px; padding: 6px 12px 4px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; border: 0; background: transparent; color: #798599; font-size: 9px; cursor: pointer; }
+  .bottom-nav button { min-width: 0; padding: 6px 4px 4px; flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; border: 0; background: transparent; color: #798599; font-size: 9px; cursor: pointer; }
+  .reader-title-row, .reader-title-row > div { min-width: 0; }
+  .reader-title-row h1 { overflow-wrap: anywhere; }
+  .form-field input:not([type="checkbox"]):not([type="radio"]), .form-field textarea, .form-field select, .note-editor input, .note-editor textarea { max-width: 100%; }
   .bottom-nav button.active { color: var(--blue-dark); font-weight: 700; }
   .ad-placeholder { margin-bottom: 86px; }
   .toast { width: calc(100% - 24px); top: 71px; }
